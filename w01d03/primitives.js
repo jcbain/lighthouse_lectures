@@ -1,28 +1,36 @@
 // primitive types
 // numbers, booleans, undefined, null, string... symbol, bigint
 
-const height = 65.5;
-const isAwesome = false;
-const notDefined = undefined;
-const nul = null;
-const name = 'Scully';
+const creature = 'bigfoot';
+console.log(typeof creature);
 
-const mysteriousSymbol = Symbol('Mulder');
-const hugeNumber = Number.MAX_SAFE_INTEGER + 1;
-const yugeNumber = 9007199254740992n;
+const numToes = 10;
+console.log(typeof numToes);
 
-console.log('one large number', hugeNumber);
-console.log(yugeNumber === 9007199254740993n);
+const isTall = true;
+console.log(typeof isTall);
+
+let lastSpotted;
+console.log(typeof lastSpotted);
+
+const tinderProfile = null;
+console.log(typeof tinderProfile);
+
+const type = Symbol('crypto')
+const someHugeNumber = 9007199254740992n;
 
 
-// non-primitives
-// objects
+const bigint = 9007199254740992n;
+console.log(typeof bigint);
 
-const mythicalCreatures = ['bigfoot', 'el chupacabra', 'loch ness monster', 'unicorn'];
-const mythicalCreature = {
-  type: 'bigfoot',
-  name: 'harry',
-  location: 'U.S.',
-  hasLargeFeet: true,
-  relatives: ['yeti', 'gigantopithecus', 'chewbacca']
-}
+const yugeNumber = Number.MAX_SAFE_INTEGER; 
+console.log(yugeNumber)
+
+
+// non primitives --- structural data types
+
+// objects (order not important -- key value pairs)
+// arrays (order is important -- index value pair) -- also an object
+
+const arr = [];
+const obj = {};

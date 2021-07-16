@@ -4,5 +4,6 @@
 - [ ] primitive data types review
 - [ ] objects!!
 - [ ] passing primitives and objects to functions
-- [ ] methods (functions inside of objects) and using `this`
+- [ ] function as object methods
+- [ ] what is `this`
 - [ ] object iteration with `for...in` loops
