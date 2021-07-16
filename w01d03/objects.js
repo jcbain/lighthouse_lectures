@@ -22,8 +22,7 @@ const bigfoot = ['bigfoot', 'harry', 'U.S.', true];
 const elChupacabra = ['el chupacabra', 'billie', 'Puerto Rico', false];
 
 // keys can hold semantic meaning that make our code easier to understand
-const mythicalCreature = {
-  type: 'bigfoot',
+const bigfoot = {
   name: 'harry',
   location: 'U.S.',
   hasLargeFeet: true,
