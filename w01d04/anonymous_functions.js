@@ -20,4 +20,3 @@ yellyellAtJames(function(name) {
   return `You are awesome, ${name}`
 })
 
-// delete later
