@@ -15,3 +15,9 @@ const yellAtJames = function(anotherFunc) {
 }
 
 // anonymous functions
+
+yellyellAtJames(function(name) {
+  return `You are awesome, ${name}`
+})
+
+// delete later
