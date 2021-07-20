@@ -15,8 +15,16 @@ const yellAtJames = function(anotherFunc) {
 }
 
 // anonymous functions
+// 
 
-yellyellAtJames(function(name) {
+const result = yellAtJames(function(name) {
   return `You are awesome, ${name}`
-})
+});
 
+console.log(result);
+
+// out of scope
+// immediately invoked function expression
+// (function() {
+//   console.log('hello')
+// })();
