@@ -16,12 +16,17 @@ const yellAtJames = function(anotherFunc) {
 
 // anonymous functions
 // 
+const result = yellAtJames(sayHello);
 
-const result = yellAtJames(function(name) {
+// now with an anonymous function
+const anotherResult = yellAtJames(function(name) {
   return `You are awesome, ${name}`
 });
 
-console.log(result);
+console.log('passed function varibale', result);
+console.log('passed anonymous function', anotherResult)
+
+// python tutor
 
 // out of scope
 // immediately invoked function expression

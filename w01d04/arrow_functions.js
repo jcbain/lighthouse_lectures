@@ -2,11 +2,11 @@
 // one way to write a function
 // function expression
 
-// const sayHello = function(name) {
-//   console.log(`hello there, ${name}`);
-// };
+const sayHello = function(name) {
+  console.log(`hello there, ${name}`);
+};
 
-// sayHello('James');
+sayHello('James');
 
 
 // there is also function declaration syntax
