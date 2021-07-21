@@ -5,7 +5,7 @@
 
 const printBio = function() {
     console.log(`My name is ${this.name} and I have ${this.hasLargeFeet ? 'big' : 'small'} feet!`)
-  };
+};
 
 const bigfoot = {
   name: 'harry',

@@ -48,3 +48,14 @@ const printDifferentCreatureName = function(obj){
 console.log('creature name before function:', creatureObject);
 printDifferentCreatureName(creatureObject);
 console.log('creature name after function', creatureObject);
+
+// what happens if we modify the reference within the function?
+// the value of the object will go unchanged
+
+const sayDifferentCreatureName = function(obj) {
+  obj = {
+    name: 'el chupacabra'
+  }
+  console.log('creature name during function:', obj.name);
+
+}
