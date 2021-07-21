@@ -23,7 +23,7 @@ const someHugeNumber = 9007199254740992n;
 const bigint = 9007199254740992n;
 console.log(typeof bigint);
 
-const yugeNumber = Number.MAX_SAFE_INTEGER; 
+const yugeNumber = Number.MAX_SAFE_INTEGER; // 2 ** 53 - 1
 console.log(yugeNumber)
 
 
