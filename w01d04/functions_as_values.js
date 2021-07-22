@@ -43,5 +43,5 @@ const subtractTwo = function(num) {
 const mathFunctions = [addTwo, subtractTwo];
 
 // not the prettiest but it works
-console.log('mathFunctions[0](5)', mathFunctions[0](4))
-console.log('mathFunctions[1](5)', mathFunctions[1](4));
+console.log('mathFunctions[0](4)', mathFunctions[0](4))
+console.log('mathFunctions[1](4)', mathFunctions[1](4));
