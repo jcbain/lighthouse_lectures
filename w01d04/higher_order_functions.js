@@ -63,7 +63,7 @@ const ourFilter = (arr, callback) => {
     // run the callback on each value// callback should be a logical test
     const meetsCondition = callback(val)
     // it output of the callback on the value is `true` push that value to the filteredArray
-    if(meetsCondition){ // if the callback result is equal to true at that value
+    if(meetsCondition === true){ // if the callback result is equal to true at that value
       filteredArray.push(val)
     }
   }
@@ -72,5 +72,6 @@ const ourFilter = (arr, callback) => {
   return filteredArray;
 }
 
+// console.log(ourFilter(nums, val => 'james'))
 console.log(ourFilter(nums, val => val > 2));
 console.log(ourFilter(names, val => val === 'pizza'))
