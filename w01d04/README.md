@@ -10,7 +10,6 @@
 
 ### Functions as values
 
-
 What's on the left hand side of a function expression is just a value. This value can be extended to passing them along to another variable.
 
 ```js
