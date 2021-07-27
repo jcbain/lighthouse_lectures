@@ -1,7 +1,7 @@
 # W02D02 - Ansynchronous Control Flow
 
 ## Preamble
-- Discuss objects
+- Discuss objectives
 
 ## Recap callbacks
 - What is a callback? A function passed as an argument to another function to be called within that function
