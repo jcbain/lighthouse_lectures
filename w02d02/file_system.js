@@ -1,4 +1,3 @@
-const { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } = require('constants');
 const fs = require('fs');
 
 // const data = fs.readFileSync('./index.html')
