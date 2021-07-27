@@ -17,8 +17,9 @@ fs.readFile('./index.html',{encoding: 'utf-8'}, (err, data) => {
   if(err) {
     return console.log(err);
   }
-
+  
   console.log(data.length)
 })
+
 
 // console.log('i should run first')
