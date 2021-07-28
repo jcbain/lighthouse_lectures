@@ -1,3 +1,6 @@
+# packages
+node_modules/
+
 # linters
 .eslint*
 
