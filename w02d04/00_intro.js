@@ -1,4 +1,4 @@
-const promiseFunctions = require('./promise-generator');
+const promiseFunctions = require('./promise_generator');
 
 const resolvePromise = promiseFunctions.resolvePromise;
 
@@ -19,8 +19,33 @@ console.log('promise', promise);
 // that takes a callback once the promise resolves for which 
 // we can then do something with the value.
 // we call this consuming a value
-promise.then((data) => {
-  console.log(data)
-})
+// promise.then((data) => {
+//   console.log(data)
+// })
 
-// 
+// return a value that isn't a promise, 
+// it just wraps it in a promise and resolves immediately
+// const promise2 = promise
+//   .then((data) => {
+//     console.log(data)
+//     return 'some string'
+//   })
+
+// promise2.then((data) => {
+//   console.log(data)
+// })
+
+// we can even see in synchronous time
+// that what promise2 is is a promise
+// console.log('promise2', promise2)
+
+// most of the time we won't store our promises in
+// intermediate values. Instead, we will chain them along
+promise
+  .then((data) => {
+    console.log(data);
+    return "some string"
+  })
+  .then((data) => {
+    console.log(data)
+  })
