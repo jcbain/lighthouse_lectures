@@ -1,3 +1,5 @@
+# W02D04 - Promises
+
 ## Objectives
 - [ ] Illustrate the "callback hell" (callback waterfall) problem
 - [ ] Introduction to Promises
