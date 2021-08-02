@@ -1,6 +1,7 @@
 # W02D04 - Promises
 
 ## Objectives
+- [ ] recap asychronous control flow
 - [ ] Illustrate the "callback hell" (callback waterfall) problem
 - [ ] Introduction to Promises
 - [ ] Error handling with Promises (vs callbacks)

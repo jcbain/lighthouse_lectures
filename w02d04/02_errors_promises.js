@@ -6,15 +6,15 @@ const rejectPromise = promiseFunctions.rejectPromise;
 
 // so we've seen this
 // console.log('this runs syncronously')
-// resolvePromise("1", 0)
-//   .then((data) => {
-//     console.log(data);
-//     return resolvePromise("2", 500)
-//   })
-//   .then((data) => {
-//     console.log(data)
-//     return rejectPromise("3", 500)
-//   })
+resolvePromise("1", 0)
+  .then((data) => {
+    console.log(data);
+    return resolvePromise("2", 500)
+  })
+  .then((data) => {
+    console.log(data)
+    return rejectPromise("3", 500)
+  })
 
 // console.log('so does this')
 
@@ -24,18 +24,18 @@ const rejectPromise = promiseFunctions.rejectPromise;
 // so we must catch the error to handle it
 // throw new Error("poop")
 
-// resolvePromise("1", 0)
-//   .then((data) => {
-//     console.log(data);
-//     return resolvePromise("2", 500)
-//   })
-//   .then((data) => {
-//     console.log(data)
-//     return rejectPromise("3", 500)
-//   })
-//   .catch((err) => {
-//     console.log(err)
-//   })
+resolvePromise("1", 0)
+  .then((data) => {
+    console.log(data);
+    return resolvePromise("2", 500)
+  })
+  .then((data) => {
+    console.log(data)
+    return rejectPromise("3", 500)
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 
 // let's move the rejection up the chain
 resolvePromise("1", 0)

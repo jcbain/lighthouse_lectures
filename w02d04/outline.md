@@ -1,5 +1,8 @@
 # Promises
 
+### Quick recap on async control flow
+`recap.js`
+
 ### Demonstrate callback hell (waterfall)
 - run the profile generator callback script since it was one of their exercises
 - show code for callback
