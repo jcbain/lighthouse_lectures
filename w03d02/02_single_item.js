@@ -29,7 +29,39 @@ app.get('/pencils', (req, res) => {
   res.render('pencils', templateVars)
 })
 
-// Read => GET /pencils
+// Read => GET /pencils/:id
+// /ideas/abcd
+// /ideas/efgh
+// ...
+app.get('/pencils/:id', (req, res) => {
+  // express actually collects these key value pairs coming in from the request
+  // req.params is an object and we can see our id parameter
+  const pencilId = req.params.id;
+  // now we can retrieve a given pencil
+  const pencil = pencils[pencilId];
+  // console.log(pencil)
+
+  // now we want to throw our pencil we go back into some template vars
+  // const templateVars = { pencil };
+  // res.render('pencil', templateVars) // what would be the error at this point
+
+  // create the pencil.ejs
+  // refresh and see the single pencil
+  // what happens if we plug in an idea that doesn't exist?
+  // Error: cannot read property <something> of undefined
+  // our single pencil is undefined
+
+  // for today, let's just say that if we don't find a pencil
+  // then we can redirect them back to /pencils
+  if (!pencil) {
+    // res.redirect('/pencils') // this alone will still throw an error in the terminal, the behavior in the browser is good
+    return res.redirect('/pencils')
+  }
+
+  const templateVars = { pencil }
+  res.render('pencil', templateVars) // what would be the error at this point
+
+})
 
 app.listen(port, () => {
   console.log(`server listening on port ${port}`);

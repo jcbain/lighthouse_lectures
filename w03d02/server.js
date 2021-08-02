@@ -25,11 +25,23 @@ app.use(morgan('dev')); // middleware to log http requests and errors
 
 // Browse => GET /pencils
 app.get('/pencils', (req, res) => {
-
   const templateVars = { pencils }
-
   res.render('pencils', templateVars)
 })
+
+// Read => GET /pencils/:id
+app.get('/pencils/:id', (req, res) => {
+  const pencilId = req.params.id;
+  const pencil = pencils[pencilId];
+
+  if (!pencil) {
+    return res.redirect('/pencils')
+  }
+
+  const templateVars = { pencil }
+  res.render('pencil', templateVars) 
+})
+
 
 app.listen(port, () => {
   console.log(`server listening on port ${port}`);
