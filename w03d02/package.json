@@ -1,0 +1,17 @@
+{
+  "name": "w03d02",
+  "version": "1.0.0",
+  "description": "### Objectives - [ ] Implement CRUD over HTTP with Express - [ ] Render data fro the user using EJS templates - [ ] Use forms to submit HTTP requests - [ ] Explore the Post-Redirect-Get pattern - [ ] Use Chrome DevTools to see requests and responses - [ ] Pracitice debugging Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
