@@ -8,11 +8,22 @@
 </head>
 <body>
   <h1>A Single Pencil!</h1>
+  <a href="/pencils">Go back to all pencils</a>
+
   <div style="border: 1px solid purple">
     <h2>Type: <%= pencil.type %></h2>
-    <h2>Color: <%= pencil.type %></h2>
+    <h2>Color: <%= pencil.color %></h2>
     <h2>Is sharp: <%= pencil.isSharp %></h2>
+    <form method="POST" action="/pencils/<%= pencilId %>/delete">
+      <button type="submit">Delete!</button>
+    </form>
   </div>
+  
+  <form method="POST" action="/pencils/<%= pencilId %>">
+    <label>New color: </label>
+    <input name="color" value="<%= pencil.color %>"/>
+    <button type="submit">Save</button>
+  </form>
 
   
 </body>

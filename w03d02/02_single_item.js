@@ -61,6 +61,11 @@ app.get('/pencils/:id', (req, res) => {
   const templateVars = { pencil }
   res.render('pencil', templateVars) // what would be the error at this point
 
+  // take break if time
+  // when return make sure we are making a way for user to navigate without url hacking
+  // after you put it in for pencils.ejs show elements tab and how the path was dynamically rendered
+  // anchor tags can only make GET requests
+
 })
 
 app.listen(port, () => {

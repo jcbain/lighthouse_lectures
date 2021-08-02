@@ -9,11 +9,31 @@
 <body>
   <h1>All the pencils!!!</h1>
 
+  <h2>Create a new pencil</h2>
+  <form method="POST" action="/pencils">
+    <label>type: </label>
+    <input name="type" />
+    <br/>
+
+    <label>color: </label>
+    <input name="color" />
+    <br/>
+
+    <label>is sharp?: </label>
+    <input name="isSharp" />
+    <br/>
+
+    <button type="submit">Add!</button>
+
+
+  </form>
+
   <% for (const pencilKey in pencils) { %>
     <div style="border: 1px solid palevioletred">
       <h2>pencil type: <%= pencils[pencilKey].type %></h2>
       <h2>color: <%= pencils[pencilKey].color %></h2>
       <h2>is sharp: <%= pencils[pencilKey].isSharp %></h2>
+      <a href="/pencils/<%= pencilKey %>">details</a>
     </div>
   <% } %>
   

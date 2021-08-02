@@ -68,11 +68,22 @@ app.post('/pencils', (req, res) => {
 })
 
 // Delete => POST /pencils/:id/delete
+// has to be post because we are updated the data
+// we have to specify which pencil we want to delete
+// so now we have a POST /pencils/:id so we just add on /delete to make it unique
 app.post('/pencils/:id/delete', (req, res) => {
   const id = req.params.id;
-  delete pencils[id];
+  // look up how to delete an attribute from an object
 
+  delete pencils[id];
+  // now that attribute is gone
+  // and we can just redirect to /pencils like everything else
   res.redirect('/pencils')
+
+  // now all we have to do is set up our template to handle this POST
+  // go to pencil.ejs and throw in the form
+
+  // once form is set up, check out the inspector tools 
 
 })
 
