@@ -59,7 +59,6 @@ app.post('/pencils/:id', (req, res) => {
 // Add => POST /pencils
 app.post('/pencils', (req, res) => {
   const newPencil = req.body;
-  console.log('newPencil', newPencil);
 
   const id = generateId();
   pencils[id] = newPencil;

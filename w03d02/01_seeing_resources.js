@@ -19,7 +19,7 @@ const pencils = {
 
 const app = express();
 
-// app.set('view engine', 'ejs')
+app.set('view engine', 'ejs') // set when engine error shows up
 
 app.use(morgan('dev')); // middleware to log http requests and errors
 
