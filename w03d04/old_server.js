@@ -42,15 +42,17 @@ const findUserByEmail = (email) => {
 }
 
 
-
+// GET / --> login page
 app.get('/', (req, res) => {
   res.render('login');
 })
 
+// GET /registration --> registration page
 app.get('/register', (req, res) => {
   res.render('register')
 })
 
+// GET /protected --> protected page for logged in users
 app.get('/protected', (req, res) => {
   const userId = req.cookies.userId;
 
@@ -68,6 +70,7 @@ app.get('/protected', (req, res) => {
   res.render('protected', templateVars)
 })
 
+// POST /login --> login form
 app.post('/login', (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
@@ -95,6 +98,7 @@ app.post('/login', (req, res) => {
 
 })
 
+// POST /register --> register a user form
 app.post('/register', (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
@@ -122,10 +126,12 @@ app.post('/register', (req, res) => {
   res.redirect('/')
 })
 
+// POST /logout --> logout form
 app.post('/logout', (req, res) => {
   res.clearCookie('userId');
   res.redirect('/')
 })
+
 
 app.listen(port, () => {
   console.log(`server listening on port ${port}`)

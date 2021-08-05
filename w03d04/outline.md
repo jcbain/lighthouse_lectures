@@ -90,6 +90,10 @@ D delete DELETE /maps/:id
 ## Middleware
 
 - middleware are built in functionality that occur between the request and the response
+- let's take a look at the method-override package for overriding the requests coming in from forms in order to meet better convention
+- check out method-override npm
+- see `03_server_middleware.js`
+
 
 
 
