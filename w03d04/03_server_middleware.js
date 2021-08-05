@@ -1,8 +1,13 @@
 const express = require('express');
 const morgan = require('morgan');
-// const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session')
 const bcrypt = require('bcryptjs')
+// bring in method-override
+// this will allow us to take our post
+// request sent from our form and transform it
+// to a more semantic http method (like put patch or delete)
+// const methodOverride = require('method-override')
+
 
 const app = express();
 const port = 8080;
@@ -25,26 +30,43 @@ const users = {
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
+
 // app.use(cookieParser());
+
 app.use(cookieSession({
-  name: 'session', // name of cookie in the browser / just a string
-  keys: ['key1', 'key2'] // used to encrypt and decrypt // no significance to the string
+  name: 'session', 
+  keys: ['key1', 'key2'] 
 }))
 
+// looks for a query parameter at the end
+// of your post method in a form like so ?_method=PATCH
+// app.use(methodOverride('_method'))
+
+// we can also just write this middleware ourselves
+app.use((req, res, next) => {
+  console.log(req.query)
+  // if there is a query parameter ?_method
+  // with a key of _method then we are going to replace
+  // the mothod from the form with the value of the _method
+  if(req.query._method) {
+    req.method = req.query._method
+  }
+  // reardless if we switch the method lets
+  // continue on with the handoff to our route handlers
+  next()
+})
+
 app.set('view engine', 'ejs');
-
-
 
 
 const findUserByEmail = (email) => {
   for (const userId in users) {
     const user = users[userId];
-    // if the email we pass matches a user's email
     if (user.email === email) {
       return user;
     }
   }
-  // no user found
+
   return null;
 }
 
@@ -59,8 +81,7 @@ app.get('/register', (req, res) => {
 })
 
 app.get('/protected', (req, res) => {
-  // const userId = req.cookies.userId;
-  const userId = req.session.userId
+  const userId = req.session.userId;
 
   if (!userId) {
     return res.status(401).send('you are not authorized to be here')
@@ -69,16 +90,17 @@ app.get('/protected', (req, res) => {
   const user = users[userId];
 
   if (!user) {
-   return res.status(400).send('you have an old cookie! git gud!')
+    return res.status(400).send('you have an old cookie! git gud!')
   }
   
   const templateVars = { user }
   res.render('protected', templateVars)
 })
 
-
-
-app.post('/login', (req, res) => {
+// for this example, let's just say that PATCH were more
+// appropriate
+// change form route to <form method="POST" action="/login?_method=PATCH">
+app.patch('/login', (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
@@ -88,32 +110,27 @@ app.post('/login', (req, res) => {
 
   const user = findUserByEmail(email);
 
-  // we didn't find user
   if (!user) {
     return res.status(400).send('no user with that email found')
   }
 
-  // can't do this anymore because our plain text password is not longer being stored
-  // instead we have to compare to the hash
-  // found the user, now does their password match?
-  // if (user.password !== password) {
-  //   return res.status(400).send('password does not match')
-  // }
   bcrypt.compare(password, user.password, (err, success) => {
     if (!success) {
-      return res.status(400).send('password does not match')
+      return res.status(400).send('password doesnt match')
     }
-    // happy path
-    // res.cookie('userId', user.id);
+
     req.session.userId = user.id
+
     res.redirect('/protected')
   })
+
 })
+
 
 app.post('/register', (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
-  const superSecret = req.body.superSecret;
+  const superSecret = req.body.superSecret
 
   if (!email || !password) {
     return res.status(400).send('email and password cannot be blank');
@@ -127,18 +144,17 @@ app.post('/register', (req, res) => {
 
   const id = Math.floor(Math.random() * 1000) + 1;
 
-  // hash the user's password
+  
   bcrypt.genSalt(10, (err, salt) => {
     bcrypt.hash(password, salt, (err, hash) => {
-
       users[id] = {
         id, 
         email,
         password: hash,
         superSecret
       }
-
       console.log(users)
+
 
       res.redirect('/')
     })
@@ -147,7 +163,6 @@ app.post('/register', (req, res) => {
 })
 
 app.post('/logout', (req, res) => {
-  // res.clearCookie('userId');
   req.session = null;
   res.redirect('/')
 })
@@ -155,4 +170,3 @@ app.post('/logout', (req, res) => {
 app.listen(port, () => {
   console.log(`server listening on port ${port}`)
 })
-

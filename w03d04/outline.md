@@ -79,5 +79,18 @@ for example maps could have pins so your routes would like
 
 B browse GET  /maps/:mapId/pins
 
+with extended verbiage methods (PUT, PATCH, DELETE)
+
+B browse GET    /maps
+R read   GET    /maps/:id
+E edit   PATCH  /maps/:id
+A add    POST   /maps
+D delete DELETE /maps/:id
+
+## Middleware
+
+- middleware are built in functionality that occur between the request and the response
+
+
 
 
