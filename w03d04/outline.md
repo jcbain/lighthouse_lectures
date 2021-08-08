@@ -59,6 +59,8 @@
     - so the person in the middle can still see the information coming over but it is all encrypted
     - we aren't going to do this for this app or in the curriculum, but you just purchase a certificate
       - when a user connects to a webpage, the webpage will send over it TLS (transport layer security) certificate which contains a public key (used for authenticating the server)
+      - this certificate also suggests that the server is who they say they are
+      - client uses public key to encrypt their data on the way back to the server then the server uses private key on their end to decrypt
 
 ## What is REST
 - It is a pattern or a way to organize our enpoint structure

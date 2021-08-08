@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+main {
+  background-color: darkmagenta;
+}
+
+img {
+  width: 300px;
+  /* height: 200px; */
+}
+h2, p {
+  color: red;
+}
+p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.green-text {
+  color: green;
+}
+
+#important-content {
+  border: 2px solid orange;
+}
+
+main h2 {
+  color: lightseagreen;
+}

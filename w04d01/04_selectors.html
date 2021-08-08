@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main {
+      /* we can put our styles in a style element */
+      background-color: darkmagenta;
+    }
+
+    img {
+      width: 300px;
+      /* height: 200px; */
+    }
+    /* what if we wanted to target multiple elements to apply the same styles? */
+    h2, p {
+      color: red;
+    }
+    p {
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    /* what if i wanted to select the favorite food heading and not the other h2s*/
+    /* well we can add a class */
+    /* and now  i can apply those styles elsewhere*/
+
+    .green-text {
+      color: green;
+    }
+    /* we can also do an id */
+    /* the id has to be unique to the page */
+    #important-content {
+      border: 2px solid orange;
+    }
+
+    /* you can also chain them together */
+    /* lets say we only want to target h2s with the class green-text */
+    /* h2.green-text {
+      color: green;
+    } */
+    /* this is called specificity. Css will always apply the more specific styles.  */
+    /* now we have an element and a class which is more specific than just an element or a class */
+    /* styles are applied from most generic to most specific with specificity gaining precedence */
+    /* element are less specific than classes than ids */
+
+    /* we can even see something more specific with just elements */
+    /* if we specify h2s within mains then this will overwrite what styles were applied to h2s */
+    /* show in devtools how styles are crossed out */
+    main h2 {
+      color: lightseagreen;
+    }
+
+    /* one more thing about specificity, you'll notice if i hover over the selector, i get this tuple */
+    /* the tuple actually refers to the specificity calculation */
+    /* go to to demonstrate https://polypane.app/css-specificity-calculator/#selector=%23awesome-id%20%23another-id%20p.some-class%20.another-class */
+    /* then demonstrate */
+    /* p {} any id nope, any class nope, just element  (0, 0, 1) */ 
+    /* p.some-class {}  any id nope, any class yes, element yes (0, 1, 1) */
+    /* #content p.someclass {} id yup, class yup, element yup (1, 1, 1) */
+    /* div#content p.someclass {}  id yup, class yup, element 2 yup (1, 1, 2) */
+
+    /* this is a balancing act. we don't want to be too specific such that no developer can ever overwrite them */
+    /* but we want to be able to apply our styles. generally element and class */
+  </style>
+</head>
+<body>
+  <h1>My profile</h1>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem quas omnis enim adipisci illum odit blanditiis laborum, dignissimos error aperiam neque aliquam provident accusantium ipsam maxime. Doloremque modi nam asperiores perspiciatis minus obcaecati voluptates, quia illo rem quidem! Perspiciatis quaerat animi voluptates, distinctio temporibus quas magnam pariatur nesciunt quo iusto.</p>
+  <div>
+    <main id="important-content">
+      <h2>my pets</h2>
+      <div class="pet-images">
+        <figure class="pet">
+          <img src="images/IMG_3296.JPG" />
+          <figcaption>Prairie</figcaption>
+        </figure>
+        <figure class="pet">
+          <img src="images/IMG_4687.JPG"/>
+          <figcaption>Pippa</figcaption>
+        </figure>
+      </div>
+    </main>
+    <aside>
+      <h2 class="green-text">my favorite foods</h2>
+      <section>
+        <!-- siblings -->
+        <p>🌮</p>
+        <p>🍕</p>
+        <p>🌯</p>
+      </div>  
+    </section>
+  </div>
+  <footer class="green-text">copyright 2021 james bain</footer>
+</body>
+</html>

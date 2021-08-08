@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* this wont work because we need to target the element */
+    /* backround-color: darkmagenta; */
+
+    main {
+      /* we can put our styles in a style element */
+      background-color: darkmagenta;
+    }
+
+    img {
+      /* notice how if we target the img tag we target all img on the page */
+      width: 300px;
+      /* height: 200px; */
+    }
+    h2 {
+      color: green;
+    }
+    p {
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    main h2 {
+      color: lightseagreen;
+    }
+    h2, p {
+      color: red;
+    }
+    .pet-images {
+      display: flex;
+      flex-direction: row;
+    }
+    .pet {
+      border: 2px solid greenyellow;
+    }
+  </style>
+</head>
+<body>
+  <h1>My profile</h1>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem quas omnis enim adipisci illum odit blanditiis laborum, dignissimos error aperiam neque aliquam provident accusantium ipsam maxime. Doloremque modi nam asperiores perspiciatis minus obcaecati voluptates, quia illo rem quidem! Perspiciatis quaerat animi voluptates, distinctio temporibus quas magnam pariatur nesciunt quo iusto.</p>
+  <div>
+    <main>
+      <h2>my pets</h2>
+      <div class="pet-images">
+        <figure class="pet">
+          <img src="images/IMG_3296.JPG" />
+          <figcaption>Prairie</figcaption>
+        </figure>
+        <figure class="pet">
+          <img src="images/IMG_4687.JPG"/>
+          <figcaption>Pippa</figcaption>
+        </figure>
+      </div>
+    </main>
+    <aside>
+      <h2>my favorite foods</h2>
+      <section>
+        <!-- siblings -->
+        <p>🌮</p>
+        <p>🍕</p>
+        <p>🌯</p>
+      </div>  
+    </section>
+  </div>
+  <footer>copyright 2021 james bain</footer>
+</body>
+</html>
