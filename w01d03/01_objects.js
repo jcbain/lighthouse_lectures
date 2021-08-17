@@ -24,9 +24,9 @@ const creature = 'bigfoot';
 // creature a function that takes in a creature as an input
 // changes creature to 'el chupacabra'
 // prints out the creature to the console
-const printDifferentCreature = function(creature){
-  creature = 'el chupacabra';
-  console.log('creature during function:', creature)
+const printDifferentCreature = function(someCreature){
+  someCreature = 'el chupacabra';
+  console.log('creature during function:', someCreature)
 }
 
 // what do you think the variable `creature` will be after it is called?
