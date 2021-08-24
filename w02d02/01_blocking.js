@@ -1,5 +1,5 @@
 // javascript is synchronous
-// single-threaded (on process executes at a time)
+// single-threaded (one process executes at a time)
 
 // we all know what is going to happen here
 // console.log(1);
