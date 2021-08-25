@@ -13,8 +13,8 @@
 - Network layer (IP)
 
 #### Be aware of
-- Transport layer (TSP, UDP)
-- Session layer 
+- Transport layer (TCP, UDP)
+- Session layer (*TCP)
 - Presentation layer (SSL, TLS)
 - Application layer (HTTP, SMTP, SSH)
 
