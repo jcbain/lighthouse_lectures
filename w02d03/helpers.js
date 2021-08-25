@@ -7,4 +7,5 @@ const generateRandomId = () => Math.floor(Math.random() * 2000)
 const generateRandomEmoji = () => {
   return emojis[Math.floor(Math.random() * emojis.length)];
 }
+
 module.exports = { generateRandomId, generateRandomEmoji };
