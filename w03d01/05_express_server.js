@@ -50,7 +50,7 @@ app.get('/dogs', (req, res) => {
 // })
 
 // hopefully this is sending red flags off in your brain
-// what happens if i have 10 cats (100, 1000, 10,000)?
+// what happens if i have 10 dogs (100, 1000, 10,000)?
 // if we take a look at those two endpoints, what is different
 // between the two? just the key
 // express allows us to make a generic endpoint 

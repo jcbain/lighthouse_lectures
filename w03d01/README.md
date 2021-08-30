@@ -1,6 +1,7 @@
 # Web Servers 101
 
 ## Objectives
+- [ ] TinyApp Demo
 - [ ] Web Servers
 - [ ] Express
 - [ ] Middleware
@@ -30,7 +31,7 @@
 - verbs - what do we want to do
   1. GET => retrieve information
   2. POST => send information to the server
-- path
+- path - what do we want to do it to
   - string
   - `/users`, `/maps`
   - http://localhost:3000/users

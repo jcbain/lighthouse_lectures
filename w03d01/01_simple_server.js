@@ -9,6 +9,7 @@ const server = http.createServer((request, response) => {
   // or even if you are sure...console.log is your best friend
   // let's console.log the request. We can see what it is
   // console.log(request)
+  
   // show that it is a massive object and you can mention something about the 
   // get request for favicon.ico
   // but find the url key and the method key

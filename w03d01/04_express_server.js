@@ -2,15 +2,6 @@
 // some data that we are going to send back to the client.
 // lets create some now
 
-
-// now we have some data that our users can interact with
-// let's take a moment and reflect back on our verbs
-// if i wanted to see all of our dogs, what verb is that?
-// a GET because a GET is a request to see a resource
-// we aren't modifying it
-
-
-
 const express = require('express');
 
 const app = express();
@@ -30,6 +21,12 @@ const dogs = {
     age: 8
   }
 }
+
+// now we have some data that our users can interact with
+// let's take a moment and reflect back on our verbs
+// if i wanted to see all of our dogs, what verb is that?
+// a GET because a GET is a request to see a resource
+// we aren't modifying it
 
 // then we have to think of a path. It wouldn't 
 // make sense if we said GET /users and got back a bunch of dogs
