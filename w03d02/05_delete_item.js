@@ -20,7 +20,6 @@ const generateId = () => {
   return Math.floor(Math.random() * 1000) + 1;
 }
 
-
 const app = express();
 
 app.set('view engine', 'ejs')
