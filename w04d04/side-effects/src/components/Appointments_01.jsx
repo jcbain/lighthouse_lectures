@@ -12,6 +12,7 @@ const Appointments = () => {
   // (6) render you will not have any data
   // (6) however, we don't want out app to fail
   // (6) so we want our state to be of the shape that it ultimately will be
+  // (6) what if it isn't, demonstrate null and do object.keys in the return
   const [appointments, setAppointments] = useState({})
 
   // (2) now what i want to do is fetch all of the appointments
@@ -31,9 +32,9 @@ const Appointments = () => {
 
     // (4) so that is a big object
     // (4) but all we are interested in is in the data
-    axios.get('http://localhost:8001/api/appointments')
-      .then(res => {
-        console.log(res.data)
+    // axios.get('http://localhost:8001/api/appointments')
+    //   .then(res => {
+    //     console.log(res.data)
         // (4) check this out and now we are successfully making
         // (4) a request to get our data
 
@@ -41,12 +42,25 @@ const Appointments = () => {
         // (5) into memory because right now we are just console.logging it
         // (5) then throwing it away so we should bring in some state to 
         // (5) save it to memory
-      })
-
-  })
+      axios.get('http://localhost:8001/api/appointments')
+        // (6)
+        .then(res => {
+          console.log(res.data)
+          setAppointments(res.data)
+        })
+        // (7) react is terrible at catching async infinite loops
+        // (7) it can only cat infinite sync loops which is why we don't see the warnings
+        // (7) so how do we get out of it? just pass an empty array
+        // (7) we don't depend on anything
+  }, [])
+  // (7) lets try it out
+  // (7) now this is great, all we want to do is have axios retrieve our appointments
+  // (7) and save them to memory and that's it
   return (
     <div>
       <h1>hello from appointments</h1>
+      {/* (6) demonstrate that we count the appointments */}
+      <h2>Total number of appointments: { Object.keys(appointments).length }</h2>
     </div>
   )
 }

@@ -67,3 +67,8 @@
 - react does all of that for us but we just need the ajax part
 - when starting the react app you may need to specify a new port in `.env` or package json start script: `"PORT=3050 react-scripts start"`
 - `App_05.js` and a new component `components/Appointments_01.jsx`
+
+## UI with a Selected Appointment
+- build out Appointment.jsx component to render a selected appointment
+- `Appointment_02.jsx`
+

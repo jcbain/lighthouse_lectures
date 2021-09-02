@@ -1,7 +1,8 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 
-import Appointments from './components/Appointments_01';
+// import Appointments from './components/Appointments_01';
+import Appointments from './components/Appointments_02'
 
 function App() {
 
