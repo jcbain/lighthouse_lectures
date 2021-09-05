@@ -135,7 +135,7 @@ div#my-id { ... }
 ### Box Sizing
 * By default, the `width` and `height` of an element is only applied to its content
 * Any padding, border, and margin will then be **added** to the content width and height resulting in elements that take up more space than we had intended
-* Enter the `box-sizing` property which allows us to control this behaviour
+* Enter the `box-sizing` property which allows us to control this behavior
 * If we set the `box-sizing` property to a value of `border-box`, then the `width` and `height` of the element will apply to the entire element (border, padding, and content) resulting in elements with more predictable dimensions
 * [Interactive demo](http://guyroutledge.github.io/box-model/)
 
@@ -170,7 +170,7 @@ Front-end development is a chance for us to express our creativity. Creativity l
 
 
 ## Links
-
+* [js fiddle exercise today](https://jsfiddle.net/jcbain/rLjfa7ms/39/)
 * [html elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 * [box model neighborhood analogy](https://blog.codeanalogies.com/2017/03/27/the-css-box-model-explained-by-living-in-a-boring-suburban-neighborhood/)
 * [interactive box model demo](http://guyroutledge.github.io/box-model/)
