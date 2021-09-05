@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+  .container {
+    background-color: #e6e6e3;
+    width: 100%;
+    height: 80vh;
+    border: 2px dashed #004D40;
+    /* css tricks has some good flexbox descriptions and visual content */
+    /* make a flexbox element */
+    /* display: flex;  */
+
+    /* distribution of the items around the main axis */
+    /* justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly */
+
+    /* distribution of the items around the cross axis */
+    /* align-items: flex-start | flex-end | center | stretch */
+  }
+
+  .food {
+    font-size: 64px;
+    border: 2px dashed darkgrey;
+    border-radius: 5px;
+    margin: 10px;
+  }
+
+  .food-1 {
+    border-color: #D81B60;
+    /* order of children */
+    /* order: 3; */
+
+    /* flex-grow will grow the item to take up available space */
+    /* if applied to multiple values, then flex-box attempts to split like a pie */
+    /* flex-grow: 1; */
+
+    /* flex-basis can be used to specify how much of the container space you want to take up */
+    /* flex-basis: 20% */
+  }
+
+  .food-2 {
+    border-color: #1E88E5;
+    /* order: 2; */
+  }
+
+  .food-3 {
+    border-color: #FFC107;
+    /* order: 1; */
+  }
+
+  </style>
+</head>
+<body>
+  <main class="container">
+    <p class="food food-1">🌮</p>
+    <p class="food food-2">🍕</p>
+    <p class="food food-3">🌯</p>
+  </main>
+</body>
+</html>
