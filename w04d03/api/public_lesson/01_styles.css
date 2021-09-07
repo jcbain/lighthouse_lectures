@@ -6,7 +6,7 @@
 .blog-post {
   border: 2px solid salmon;
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .blog-post > h2 {

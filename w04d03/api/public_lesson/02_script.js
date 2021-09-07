@@ -19,7 +19,7 @@ $(() => {
     },
     // 3 and if we get an error
     error: (err) => {
-      console.err(`error: ${err}`)
+      console.log(`error: ${err}`)
     }
     // 4 and now we should see our data if we look
     // 4 in the console
