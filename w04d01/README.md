@@ -94,7 +94,7 @@ body {
 ```css
 /* syntax */
 selector list {
-  property: value;
+  property: value; /* each property, value pair known as declaration */
 }
 
 /* we can select by element name */

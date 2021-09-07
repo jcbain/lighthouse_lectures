@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Blog with AJAX</title>
+  </head>
+
+  <body>
+    <h1>Blog with AJAX!!!</h1>
+
+    <form id="new-blog-form">
+      <!-- 2 now it is good to go into our server and  -->
+      <!-- 2 see what our endpoint is expecting from our body -->
+      <!-- 2 its expecting `title`, `body` and `userid` -->
+      <label>Title</label>
+      <input name="title"/>
+      <br />
+
+      <label>Body</label>
+      <input name="body"/>
+      <br />
+
+      <label>Author id</label>
+      <input name="userid"/>
+      <br />
+      
+      <button type="submit">Create Blog</button>
+      <!-- 3 now with all things, if we want control  -->
+      <!-- 3 over them we need to grab them 08_script.js -->
+    </form>
+
+    <div class="blog-container">
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+
+</html>
