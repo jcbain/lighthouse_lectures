@@ -1,7 +1,5 @@
 // 1 we have to serialize our data now
 // 1 that we are taking in from our inputs
-// 1 in other words convert our url-encoded body
-// 1 to some other format
 $(() => {
 
   const fetchBlogs = () => {
