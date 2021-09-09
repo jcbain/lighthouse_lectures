@@ -19,7 +19,7 @@ class ClassComponent extends Component {
 
     // 3 we just have to call the parent's 
     // 3 constructor before calling our own
-    super();
+    super(props);
     // super(props);
     // 5 we could also do super(props) but what does 
     // 5 the parent need to do with our props

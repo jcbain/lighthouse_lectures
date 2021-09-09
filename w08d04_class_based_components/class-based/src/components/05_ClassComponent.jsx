@@ -5,7 +5,7 @@ import { Component } from 'react';
 class ClassComponent extends Component {
 
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       counter: 0,
       // 10 we can test out our merge
@@ -56,7 +56,6 @@ class ClassComponent extends Component {
       </div>
     )
   }
-
 }
 
 export default ClassComponent;
