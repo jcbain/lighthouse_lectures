@@ -33,7 +33,7 @@ function App() {
         <Switch>
           {/* 8 the path says, if the path is lifecycle render this component */}
           <Route path="/lifecycle">
-            <LifecycleComponent />
+            <LifecycleComponent someProp={'boogaloo'}/>
           </Route>
           <Route path="/class">
             <ClassComponent someProp="I'm a prop" />

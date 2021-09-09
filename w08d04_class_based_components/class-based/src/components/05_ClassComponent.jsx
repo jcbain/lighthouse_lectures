@@ -27,7 +27,8 @@ class ClassComponent extends Component {
   // 2 and perform our update
    // 3 now lets create a button
   increment() {
-    this.setState({counter: this.state.counter + 1})
+    // this.setState({counter: this.state.counter + 1})
+    this.setState((prevState) => ({counter: prevState.counter + 1}) )
     // 6 why is this undefined
     // 6 before we were calling our methods on our instantiated classes
     // 6 however, now we are handing our increment method to the dom
@@ -44,7 +45,6 @@ class ClassComponent extends Component {
 
 
   render() {
-    // const increment2 = () => this.setState({ counter: this.state.counter + 1})
     return (
       <div>
         <h2>The Class-based Component</h2>
