@@ -26,6 +26,8 @@ console.log(typeof bigint);
 const yugeNumber = Number.MAX_SAFE_INTEGER; // 2 ** 53 - 1
 console.log(yugeNumber)
 
+// console.log(9999999999999999); // > 10000000000000000
+// console.log(9007199254740992 === 9007199254740993) // > true
 
 // non primitives --- structural data types
 
