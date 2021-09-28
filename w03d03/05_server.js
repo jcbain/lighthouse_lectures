@@ -1,12 +1,10 @@
-// 01 there is still one tiny issue
-// 01 what happens if we don't have a cookie?
+// 01 we now want to register and login 
+// 01 a user based off of an email and password
+// 01 so we need a couple of endpoints
 const express = require('express');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const pageText = require('./data/languages.json');
-
-
-console.log(pageText)
 
 const app = express();
 const port = 4545;
@@ -18,14 +16,32 @@ app.use(cookieParser());
 
 app.set('view engine', 'ejs');
 
+// 02 how about we start with just rendering
+// 02 the corresponding html for these pages
+app.get('/register', (req, res) => {
+  res.render('register');
+});
+
+// 02 and for login and let's just create
+// 02 those templates
+app.get('/login', (req, res) => {
+  res.render('login');
+});
+// 03 and once we create those forms, let's take 
+// 03 a look at them after starting up the server
+
+// 04 now we need a way to actually handle 
+// 04 the submitted forms so we need some post 
+// 04 requests
+
+
+app.post('/login', (req, res) => {});
+
+app.post('/register', (req, res) => {});
+
 
 app.get('/home', (req, res) => {
   console.log(req.cookies);
-  // 02 well we can use the logical or to 
-  // 02 set a default
-  // 02 what this does is say if req.cookies.language
-  // 02 is truthy, then set selectedLangauge to that value
-  // 02 otherwise set it to "eo"
 
   const selectedLanguage = req.cookies.language || "eo";
   const templateVars = {
@@ -36,7 +52,6 @@ app.get('/home', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-  // 03 and do it for the about as well
   const selectedLanguage = req.cookies.language || "eo";
   const templateVars = {
     head: pageText.aboutHeaders[selectedLanguage],
@@ -47,7 +62,6 @@ app.get('/about', (req, res) => {
 
 
 app.get('/languages/:language_code', (req, res) => {
-  // 04 and there we have it time for break
   const languageCode = req.params.language_code || "eo";
 
   res.cookie('language', languageCode); 

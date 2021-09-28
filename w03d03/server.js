@@ -39,25 +39,26 @@ app.get('/login', (req, res) => {
   res.render('login');
 });
 
-app.get('/register', (req, res) => {
 
+app.get('/register', (req, res) => {
+  
   res.render('register');
 });
 
 app.post('/register', (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
-
+  
   if(!email || !password) {
     return res.status(400).send("no user name or password provided");
   }
-
+  
   const user = findUserByEmail(email);
-
+  
   if(user) {
     return res.status(400).send("user already exists with that email");
   }
-
+  
   const id = generateRandomId();
   users[id] = {
     id, 
@@ -71,25 +72,30 @@ app.post('/register', (req, res) => {
 app.post('/login', (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
-
+  
   if(!email || !password) {
     return res.status(400).send("no user name or password provided");
   }
-
+  
   const user = findUserByEmail(email);
-
+  
   if(!user) {
     return res.status(400).send("user doesn't exist with that email");
   }
-
+  
   if(user.password !== password) {
     return res.status(401).send("password doesn't match");
   }
-
+  
   const id = user.id;
   res.cookie('user_id', id);
   res.redirect('/secrets');
 })
+
+app.post('/logout', (req, res) => {
+  res.clearCookie('user_id'); // this cookie is the same one we set in login
+  res.redirect('/login')
+});
 
 app.get('/secrets', (req, res) => {
   const userId = req.cookies.user_id;
