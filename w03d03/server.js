@@ -99,7 +99,16 @@ app.post('/logout', (req, res) => {
 
 app.get('/secrets', (req, res) => {
   const userId = req.cookies.user_id;
+
+  if(!userId){
+    res.status(401).send('you are not authorized to be here')
+  }
+  
   const user = users[userId];
+
+  if(!user){
+    return res.status(400).send('you have an old cookie')
+  }
 
   const templateVars = {
     email: user.email
