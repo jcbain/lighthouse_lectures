@@ -1,21 +1,27 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { useState } from 'react';
+import useInput from '../useInput';
 
-describe('useState tests', () => {
-  test('should start with initial val', () => {
-    const initialValue = "James";
-    const { result } = renderHook(() => useState(initialValue));
-    console.log(result.current)
-    expect(result.current[0]).toBe(initialValue);
+describe('useInput tests', () => {
+  test('should start with intial input of ""', () => {
+    const { result } = renderHook(() => useInput());
+    const { value } = result.current;
+
+    expect(value).toBe("");
   })
+  
+  test('input should be equal to event.target.value when onChange is called', () => {
+    const { result } = renderHook(() => useInput());
+    const { onChange } = result.current;
 
-  test('should be a new value when updated', () => {
-    const newValue = "Jennifer";
-    const { result } = renderHook(() => useState("James"));
-    act(() => {
-      result.current[1](newValue);
-    })
+    const event = {
+      target: {
+        value: "james"
+      }
+    }
 
-    expect(result.current[0]).toBe("bob");
+    act(() => onChange(event));
+
+    const { value } = result.current;
+    expect(value).toBe(event.target.value);
   })
 })

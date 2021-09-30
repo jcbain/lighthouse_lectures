@@ -1,3 +1,5 @@
+// 01 in this component, we just want to show
+
 import { useEffect, useState } from 'react';
 import useDocumentTitle from "../hooks/useDocumentTitle";
 

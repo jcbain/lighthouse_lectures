@@ -1,19 +1,22 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import useMouseMove from "../hooks/useMouseMove";
 
 const Mouse = () => {
-  const [position, setPosition] = useState({x: 0, y: 0})
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      setPosition({
-        x: event.clientX,
-        y: event.clientY
-      })
-    }
-    document.addEventListener('mousemove', handleMouseMove)
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove)
-    }
-  })
+
+  const position = useMouseMove();
+  // const [position, setPosition] = useState({x: 0, y: 0})
+  // useEffect(() => {
+  //   const handleMouseMove = (event) => {
+  //     setPosition({
+  //       x: event.clientX,
+  //       y: event.clientY
+  //     })
+  //   }
+  //   document.addEventListener('mousemove', handleMouseMove)
+  //   return () => {
+  //     document.removeEventListener('mousemove', handleMouseMove)
+  //   }
+  // })
 
   const pointerStyle = {
     position: 'absolute',
@@ -24,6 +27,7 @@ const Mouse = () => {
     top: position.y - 50,
     borderRadius: '50%'
   }
+
   return (
     <div style={{position: 'relative'}}>
       <h1>Mouse Position Component</h1>
