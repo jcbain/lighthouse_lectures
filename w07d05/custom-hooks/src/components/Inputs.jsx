@@ -1,3 +1,8 @@
+// 01 so here we are going to set up 
+// 01 a form, and use some hooks
+// 01 to perform an action you've probably
+// 01 done a couple of times
+
 import { useState } from 'react';
 import useInput from '../hooks/useInput';
 
@@ -5,6 +10,10 @@ const Inputs = () => {
   // const [username, setUsername] = useState("");
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
+
+  // 02 each call here is its own reference to state
+  // 02 so there are no conflicts, much in the
+  // 02 same way that we used useState three times above
   const usernameInput = useInput();
   const emailInput = useInput();
   const passwordInput = useInput();

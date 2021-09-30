@@ -5,7 +5,7 @@ import './App.css';
 // import Location from './components/Location';
 // import Bored from './components/Bored';
 // import useApi from './hooks/useApi';
-import Sprite from './components/Sprite'
+// import Sprite from './components/Sprite'
 
 function App() {
   // const {error, data, loading} = useApi('https://www.boredapi.com/api/activity');
@@ -20,12 +20,12 @@ function App() {
       {/* {error && <p>and error occured</p>}
       {loading && <p>loading</p>}
       {(!loading && !error) && <Bored activity={data.activity} participants={data.participants}/>} */}
-      <div style={{display: 'flex'}}>
-        <Sprite animal={'dog_2'}/>
+      {/* <div style={{display: 'flex'}}> */}
+        {/* <Sprite animal={'dog_2'}/> */}
         {/* <Sprite animal={'dog_1'}/>
         <Sprite animal={'cat_1'}/>
         <Sprite animal={'cat_2'}/> */}
-      </div>
+      {/* </div> */}
     </div>
   );
 }

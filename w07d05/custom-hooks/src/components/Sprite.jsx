@@ -1,7 +1,15 @@
-import { useEffect, useState } from 'react';
+// 01 so here is our sprite. 
+// 01 essentially i have a sprite
+// 01 sheet that has 6 frames to it
+// 01 so any time i press a key
+// 01 then i want the frame to increase
+// 01 and if it is on the last one
+// 01 then i want it to start back at the beginning
+// 01 lets take a look
+import { useState } from 'react';
 import './sprite.css'
 
-import useKeyDown from '../hooks/useKeyDown';
+// import useKeyDown from '../hooks/useKeyDown';
 
 const Sprite = (props) => {
 
@@ -29,10 +37,8 @@ const Sprite = (props) => {
     ))
   }
 
-  useKeyDown('b', moveRight);
-  useKeyDown('g', moveLeft)
-
-
+  // useKeyDown('b', moveRight);
+  // useKeyDown('g', moveLeft)
 
   return (
     <div className="sprite-container">

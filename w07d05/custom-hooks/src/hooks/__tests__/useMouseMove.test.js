@@ -1,3 +1,9 @@
+// 01 so we aren't going to dive too much into 
+// 01 testing but I do want to at least point it out
+// 01 we will be talking more about this next week
+// 01 so don't worry
+// 01 did have to bring in an external library though to do this
+// 01 because hooks can only be called in react components
 import { renderHook } from '@testing-library/react-hooks';
 import { fireEvent } from '@testing-library/react';
 import useMouseMove from '../useMouseMove'

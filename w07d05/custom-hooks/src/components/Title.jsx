@@ -1,5 +1,6 @@
 // 01 in this component, we just want to show
-
+// 01 that we can use a hook to change
+// 01 the document title, which is a pretty common task
 import { useEffect, useState } from 'react';
 import useDocumentTitle from "../hooks/useDocumentTitle";
 

@@ -1,3 +1,7 @@
+// 01 we also have the ability to see a users location
+// 01 this comes built into the browser
+// 01 through the `navigator` object
+
 // import { useEffect, useState } from 'react';
 import useLocation from '../hooks/useLocation';
 

@@ -1,3 +1,9 @@
+// 01 so in this component, we are interested
+// 01 in tracking x and y coordinates of our mouse
+// 01 to do this, we we are set up a listener 
+// 01 for when the mouse moves and off it 
+// 01 grab the clientX and clientY 
+
 // import { useEffect, useState } from "react";
 import useMouseMove from "../hooks/useMouseMove";
 

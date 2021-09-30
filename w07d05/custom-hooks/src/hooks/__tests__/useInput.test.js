@@ -1,3 +1,9 @@
+// 01 here, we want to make sure that our initial
+// 01 input starts at ""
+// 01 as well as if we pass a pseudo event
+// 01 the event.target.value will be what is
+// 01 saved as the state variable
+
 import { renderHook, act } from '@testing-library/react-hooks';
 import useInput from '../useInput';
 
