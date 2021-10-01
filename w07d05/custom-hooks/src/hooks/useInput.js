@@ -13,7 +13,7 @@ const useInput = () => {
   }
   // 02 it also means we can provide functionality
   // 02 to clear the input if we want to
-  // 02 or not
+  // 02 or notuse
   const clearValue = () => {
     setValue("");
   }
