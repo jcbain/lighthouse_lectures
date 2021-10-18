@@ -1,4 +1,4 @@
-# Encapsulated Styles with styled components 
+# W10 - Advanced Topic -- Encapsulated Styles with styled components 
 
 ## Objectives
 - [ ] encapsulated styles

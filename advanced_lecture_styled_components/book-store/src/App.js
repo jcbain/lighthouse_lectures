@@ -17,11 +17,13 @@ import "./app.scss"
 import BooksContainer from './components/BooksContainer';
 
 function App() {
-  const { books, authorValue, titleValue, handleSearch,setAuthorValue, setTitleValue, loading, error } = useBookData("robot");
+  const { books, authorValue, titleValue, handleSearch,setAuthorValue, setTitleValue } = useBookData("robot");
   const [ theme, setTheme ] = useState('light');
-  console.log(books)
+
+  console.log(books.data)
   const selectedTheme = theme === 'light' ? light : dark;
-  const bookCards = books.map((book, i) => {
+  
+  const bookCards = books.data.map((book, i) => {
     const imageLink = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : "images/nopic.png";
     return (<BookCard 
       key={i}
@@ -46,7 +48,7 @@ function App() {
             handleSearch={handleSearch}
           />
           <BooksContainer>
-            {!loading && !error && (
+            {!books.loading && !books.error && (
               bookCards
             )}
           </BooksContainer>
@@ -75,7 +77,7 @@ function App() {
         
           {/* <div style={{padding: "20px 20px", display: "flex", flexWrap: "wrap", justifyContent: "space-around", gap: "20px", background: "white"}}>
             <Sticky isSticky/>
-            {!loading && !error && (
+            {!books.loading && !books.error && (
               bookCards
             )}
           </div> */}
