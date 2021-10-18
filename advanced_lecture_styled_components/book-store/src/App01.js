@@ -21,7 +21,6 @@ function App() {
   const { books, authorValue, titleValue, handleSearch,setAuthorValue, setTitleValue } = useBookData("robot");
   const [ theme, setTheme ] = useState('light');
 
-  console.log(books.data)
   const selectedTheme = theme === 'light' ? light : dark;
 
   const bookCards = books.data.map((book, i) => {
@@ -41,19 +40,7 @@ function App() {
         <Router>
           <Header theme={theme} setTheme={setTheme}/>
           <Welcome />
-          <BookSearch 
-            authorValue={authorValue} 
-            titleValue={titleValue} 
-            setAuthorValue={setAuthorValue} 
-            setTitleValue={setTitleValue} 
-            handleSearch={handleSearch}
-          />
-          <BooksContainer>
-            {!books.loading && !books.error && (
-              bookCards
-            )}
-          </BooksContainer>
-          {/* <div className="book-search">
+          <div className="book-search">
             <Sticky isSticky/>
             <h2>Looking for something?</h2>
             <form>
@@ -74,14 +61,14 @@ function App() {
                 Search
               </button>
             </form>
-          </div> */}
+          </div>
         
-          {/* <div style={{padding: "20px 20px", display: "flex", flexWrap: "wrap", justifyContent: "space-around", gap: "20px", background: "white"}}>
+          <div style={{padding: "20px 20px", display: "flex", flexWrap: "wrap", justifyContent: "space-around", gap: "20px", background: "white"}}>
             <Sticky isSticky/>
             {!books.loading && !books.error && (
               bookCards
             )}
-          </div> */}
+          </div>
           
 
         </Router>
