@@ -20,6 +20,7 @@ class Rectangle {
     this.length = length;
     this.width = width;
   }
+
   
   // 6 but we may want other functionality
   // 6 we may want a method that calculates 
@@ -27,6 +28,7 @@ class Rectangle {
   calculateArea() {
     return this.length * this.width;
   }
+ 
   // 7 and now we can test that out
 }
 
@@ -79,3 +81,32 @@ class RectangularPrism extends Rectangle {
 // 15 now lets try this out
 const myPrism = new RectangularPrism(4,5, 2)
 console.log(myPrism.calculateVolume())
+
+
+// just extra stuff
+// about classes
+// including static methods
+// and getters
+// class AnotherRectangle {
+//   constructor(length, width) {
+//     this.length = length;
+//     this.width = width;
+//   }
+
+//   get area() {
+//     return this.calculateArea();
+//   }
+
+//   static findAreaFromTwoValues(width, height){
+//     return width * height;
+//   }
+  
+//   calculateArea() {
+//     return this.length * this.width;
+//   }
+ 
+// }
+
+// console.log(AnotherRectangle.findAreaFromTwoValues(5, 6))
+// const anotherRect = new AnotherRectangle(3,4)
+// console.log(anotherRect.area)
