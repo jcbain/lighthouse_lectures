@@ -18,18 +18,18 @@ const useBookData = (defaultTitle) => {
     fetch(`https://www.googleapis.com/books/v1/volumes?q=${title}${searchAuthor}&country=CA&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
     .then(response => response.json())
     .then(response => {
-      setBooks({
-        ...books,
+      setBooks(prev => ({
+        ...prev,
         data: response.items,
         loading: false
-      })
+      }))
     })
     .catch(err => {
-      setBooks({
-        ...books,
+      setBooks(prev => ({
+        ...prev,
         error: true,
         loading: false
-      })
+      }))
     })
 
   }, [title, author])

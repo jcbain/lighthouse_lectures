@@ -1,16 +1,23 @@
-import { useState } from 'react';
+// 00 what we have here is an application
+// 00 mean to search for books
+// 00 it is a pretty simple application
+// 00 and includes concepts that we have already learned
+// 00 in terms of react
+// 00 however, today we are going to see 
+// 00 some of the features of styled components
+// 00 and how we an use them to style 
+// 00 our app
 
-import useBookData from './hooks/useBookData';
+import { useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
+import useBookData from './hooks/useBookData';
 import { light, dark } from './themes'
 import GlobalStyle from './components/GlobalStyles';
-import Header from './components/Header';
+import Header from './components/02Header/07index';
 import Welcome from './components/Welcome'
-import {TopBar as Sticky} from './components/Header/styles'
 import BookCard from './components/BookCard';
-import Input from './components/Input'
 import BookSearch from './components/BookSearch';
 
 import "./app.scss"
@@ -38,37 +45,23 @@ function App() {
       <div className="App">
         <GlobalStyle />
         <Router>
+          {/* 01 specifically, we are going to  */}
+          {/* 01 to be styling the header component */}
+          {/* 01 and the components that make it up */}
           <Header theme={theme} setTheme={setTheme}/>
           <Welcome />
-          <div className="book-search">
-            <Sticky isSticky/>
-            <h2>Looking for something?</h2>
-            <form>
-              <Input
-                label="book title"
-                value={titleValue}
-                onChange={(e) => setTitleValue(e.target.value)}
-              />
-              <Input
-                label="author"
-                value={authorValue}
-                onChange={(e) => setAuthorValue(e.target.value)}
-              /> 
-              <button 
-                type="submit" 
-                onClick={handleSearch}
-              >
-                Search
-              </button>
-            </form>
-          </div>
-        
-          <div style={{padding: "20px 20px", display: "flex", flexWrap: "wrap", justifyContent: "space-around", gap: "20px", background: "white"}}>
-            <Sticky isSticky/>
+          <BookSearch 
+            authorValue={authorValue} 
+            titleValue={titleValue} 
+            setAuthorValue={setAuthorValue} 
+            setTitleValue={setTitleValue} 
+            handleSearch={handleSearch}
+          />
+          <BooksContainer>
             {!books.loading && !books.error && (
               bookCards
             )}
-          </div>
+          </BooksContainer>
           
 
         </Router>

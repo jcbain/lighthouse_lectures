@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Wrapper = styled(Link)`
   font-size: 14px;
   text-decoration: none;
-  color: ${props => props.theme.navLink.palette.text};;
+  color: ${props => props.theme.navLink.palette.text};
   &:hover {
     color: ${props => props.theme.navLink.palette.hoverText};
   }

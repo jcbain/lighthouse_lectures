@@ -3,8 +3,8 @@
 ## Objectives
 - [ ] encapsulated styles
 - [ ] basic usage of styled components
-- [ ] styling with props
 - [ ] extending styles
+- [ ] styling with props
 - [ ] styling "other" components
 - [ ] styling "our" components
 - [ ] theming

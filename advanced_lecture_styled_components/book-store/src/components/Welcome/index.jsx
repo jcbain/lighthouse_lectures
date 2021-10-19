@@ -1,6 +1,6 @@
 import {
   Hero,
-  SpecialText,
+  Heading,
   Paragraph,
   ButtonContainer,
   Button
@@ -12,7 +12,7 @@ const Welcome = (props) => {
   return (
     <Hero>
     <Sticky isSticky />
-      <SpecialText>Find your next read</SpecialText>
+      <Heading>Find your next read</Heading>
       <Paragraph>Welcome to Mulder's Books where we currate the Arrakis' largest selection of paranormal publications. Not looking for something strange? Don't worry, we also carry your more conventional reads!</Paragraph>
       <ButtonContainer>
         <Button>search collection</Button>

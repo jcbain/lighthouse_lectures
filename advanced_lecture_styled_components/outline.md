@@ -10,4 +10,3 @@
 - show documentation
 - download and make a quick example
 
-## encapsulated styles

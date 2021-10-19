@@ -7,7 +7,7 @@ export const Hero = styled.section`
   padding: 40px 60px;
 `;
 
-export const SpecialText = styled.h2`
+export const Heading = styled.h2`
   font-size: 74px;
   font-family: 'Abril Fatface', cursive;
   width: 50%;
