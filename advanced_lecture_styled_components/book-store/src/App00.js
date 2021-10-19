@@ -6,6 +6,8 @@
 // 00 which we will go ahead and use
 import styled from 'styled-components';
 
+import RandomButton from './components/RandomButton';
+import RandomInput from './components/RandomInput';
 // 01 now we can go ahead and
 // 01 apply styles directly 
 // 01 to our rendered Button component
@@ -23,6 +25,8 @@ function App() {
   return (
     <div className="App">
       <Button>I'm just a button</Button>
+      <RandomButton>button</RandomButton>
+      <RandomInput />
     </div>
   )
 }

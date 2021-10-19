@@ -10,3 +10,7 @@
 - show documentation
 - download and make a quick example
 
+
+## finish up
+- show css function
+- show GlobalStyle

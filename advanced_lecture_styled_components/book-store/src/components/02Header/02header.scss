@@ -16,7 +16,7 @@
   justify-content: space-between;
   padding: 10px 20px;
   align-items: baseline;
-  .header__main, .header__main--sticky & {
+  .header__main & {
     flex-basis: 50%;
   }
 }
