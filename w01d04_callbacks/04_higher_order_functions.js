@@ -75,3 +75,14 @@ const ourFilter = (arr, callback) => {
 // console.log(ourFilter(nums, val => 'james'))
 console.log(ourFilter(nums, val => val > 2));
 console.log(ourFilter(names, val => val === 'pizza'))
+
+const ourMap = (arr, callback) => {
+  const newArray = [];
+  for(const val of arr) {
+    newArray.push(callback(val));
+  }
+  return newArray
+}
+
+console.log(ourMap([1, 2, 3, 4], (val) => val + 2))
+console.log(ourMap([{name: 'james'}, {name: 'jennifer'}], (person) => `my name is ${person.name}`))

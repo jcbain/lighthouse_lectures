@@ -37,7 +37,6 @@ sayGoodbye('Lynn')
 // single liners don't use curly braces and have implict returns
 
 const addTwo = num => num + 2;
-
 console.log(addTwo(4))
 
 // we can also pass them to other functions

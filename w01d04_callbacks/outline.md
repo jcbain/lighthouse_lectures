@@ -21,7 +21,7 @@ const person = {
 }
 ```
 
-Therefore, it can be extended to functions such that what's on the left hand side of the function expression is the key and what's on the left is the value
+Therefore, it can be extended to functions such that what's on the left hand side of the function expression is the key and what's on the right is the value
 
 ```js
 const sayHello = function(name) {
