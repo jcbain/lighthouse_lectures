@@ -62,8 +62,8 @@ class HelloWorld extends React.Component {
 
 ```js
 class StateExample extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       message: 'hello world'
     };
@@ -99,8 +99,8 @@ class StateExample extends React.Component {
 
 ```js
 class BindExample extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.handleClick = this.handleClick.bind(this);
   }
 

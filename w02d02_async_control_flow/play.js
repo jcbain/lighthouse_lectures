@@ -1,24 +1,22 @@
-// const fs = require('fs')
-// const {getUsers} = require('./helpers')
+const higherOrderFunction = (callback) => {
+  const data = {
+    userName: 'Mulder'
+  }
+  console.log('(1) before the settimeout')
+
+  setTimeout(() => {
+    data.userName = 'Scully';
+    callback(data)
+    // return data; // no one here to capture the value so the return value returns undefined
+  }, 1000)
+
+  console.log('(2) after the settimeout')
+  // return data // doesn't work/ executed syncronously/ still Mulder
+}
+
+higherOrderFunction((data) => {
+  data.checkIn = new Date();
+  console.log(`${data.userName} check in at ${data.checkIn}`)
 
 
-// console.log('hi')
-// getUsers((data) => {
-//   const filterData = data.filter(row => row.name === 'scully')
-//   console.log(filterData)
-// })
-// console.log('i should run too')
-
-
-// const data = fs.readFileSync('./index.html', {encoding: 'utf8'})
-// console.log(data)
-
-// console.log('before file read')
-// fs.readFile('./index.html', {encoding: 'utf8'}, (err, data) => {
-//   if(err) {
-//     return console.log(`there was an error: ${err}`)
-//   }
-//   console.log(data)
-// })
-// console.log('after file read')
-
+})

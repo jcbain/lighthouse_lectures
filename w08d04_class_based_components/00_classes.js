@@ -82,6 +82,9 @@ class RectangularPrism extends Rectangle {
 const myPrism = new RectangularPrism(4,5, 2)
 console.log(myPrism.calculateVolume())
 
+// show that this drops out of scope
+const calculateVolume = myPrism.calculateVolume;
+calculateVolume();
 
 // just extra stuff
 // about classes
