@@ -28,31 +28,34 @@ app.use(cookieParser());
 app.set('view engine', 'ejs');
 
 
+// helper functions
+// check to see if email belongs to 
+// a user in the users database
 const findUserByEmail = (email) => {
   for (const userId in users) {
     const user = users[userId];
-    // if the email we pass matches a user's email
     if (user.email === email) {
       return user;
     }
   }
-
-  // no user found
   return null;
 }
 
 
-// GET / --> login page
+// GET / 
+// render login page
 app.get('/', (req, res) => {
   res.render('login');
 })
 
-// GET /registration --> registration page
+// GET /registration
+// render registration page
 app.get('/register', (req, res) => {
   res.render('register')
 })
 
-// GET /protected --> protected page for logged in users
+// GET /protected 
+// render protected page
 app.get('/protected', (req, res) => {
   const userId = req.cookies.userId;
 
@@ -63,14 +66,15 @@ app.get('/protected', (req, res) => {
   const user = users[userId];
 
   if (!user) {
-    return res.status(400).send('you have an old cookie! git gud!')
+    return res.status(400).send('you have a stale cookie.')
   }
   
   const templateVars = { user }
   res.render('protected', templateVars)
 })
 
-// POST /login --> login form
+// POST /login 
+// perform action of logging in
 app.post('/login', (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
@@ -81,7 +85,6 @@ app.post('/login', (req, res) => {
 
   const user = findUserByEmail(email);
 
-  // we didn't find user
   if (!user) {
     return res.status(400).send('no user with that email found')
   }
@@ -91,14 +94,12 @@ app.post('/login', (req, res) => {
     return res.status(400).send('password does not match')
   }
 
-  // happy path
   res.cookie('userId', user.id);
-
   res.redirect('/protected')
-
 })
 
-// POST /register --> register a user form
+// POST /register
+// perform register action
 app.post('/register', (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
@@ -126,7 +127,8 @@ app.post('/register', (req, res) => {
   res.redirect('/')
 })
 
-// POST /logout --> logout form
+// POST /logout
+// perform logging out action
 app.post('/logout', (req, res) => {
   res.clearCookie('userId');
   res.redirect('/')

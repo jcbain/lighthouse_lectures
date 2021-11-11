@@ -8,19 +8,26 @@
   <title>Login</title>
 </head>
 <body>
-  <h1>Login below</h1>
-  <h2>New here? <a href="/register">Register now!</a></h2>
+  <header>
+    <h1>Login below</h1>
+  </header>
   
-  <form method="POST" action="/login?_method=PATCH">
-    <label>Email address:</label>
-    <input name="email" />
-    <br/>
+  <main>
+    <h2>New here? <a href="/register">Register now!</a></h2>
 
-    <label>Password:</label>
-    <input required name="password" />
-    <br/>
+    <!-- <form method="POST" action="/login?_method=PATCH"> -->
+    <form method="POST" action="/login">
+      <label>Email address:</label>
+      <input name="email" />
+      <br/>
 
-    <button type="submit">Login!</button>
-  </form>
+      <label>Password:</label>
+      <input required name="password" />
+      <br/>
+
+      <button type="submit">Login!</button>
+    </form>
+  </main>
 </body>
 </html>
+

@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+#channels {
+  border: 2px solid blueviolet;
+  border-radius: 2px;
+  padding: 10px 30px;
+}
+
+/* add in jquery section */
+.celebration, #channels.celebration {
+  border: 2px dotted palevioletred;
+  color: green;
+}

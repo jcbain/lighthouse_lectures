@@ -1,0 +1,31 @@
+<!-- not let's take a look at the jquery docs jquery.com 
+     and we are not going to download it locally. We 
+     are going to use what is called a CDN
+     CONTENT DELIVERY NETWORK
+     these are just special servers that only serve up
+     popularly used libraries
+     search "cdnjs jquery"
+-->
+<html>
+  <head>
+    <title>Charming Chella's</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- our browser hashes this file and checks to see if the hash matches the integrity -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- so now how do we use jquery ? Well, the majority of the time,
+         we are going to use it as a function and what is this function's
+         name? jQuery or $
+    -->
+  </head>
+  <body>
+    <h1>Charming Chella's Cheerful Channels</h1>
+    <p>Like the TVGuide but Chipper!</p>
+    <ul id="channels">
+      <li>HBO</li>
+      <li>Nickelodeon</li>
+      <li>Lifetime</li>
+    </ul>
+    <script src="04_dogs.js"></script>
+    <script src="08_script.js"></script>
+  </body>
+</html>

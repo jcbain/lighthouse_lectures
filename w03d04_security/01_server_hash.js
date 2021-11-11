@@ -116,11 +116,11 @@ app.post('/login', (req, res) => {
 
 })
 
-// start with hashing passwords here!!!
-// right now, wer are taking in three inputs from our 
-// post route
-// the email, plaintext password and a super secret that we are 
-// trusting our application with
+// 00 start with hashing passwords here!!!
+// 00 right now, wer are taking in three inputs from our 
+// 00 post route
+// 00 the email, plaintext password and a super secret that we are 
+// 00 trusting our application with
 app.post('/register', (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
@@ -138,11 +138,11 @@ app.post('/register', (req, res) => {
 
   const id = Math.floor(Math.random() * 1000) + 1;
 
-  // so here we can use our async callbacks
-  // first we generate the salt
-  // once we get back the salt, we can pass it
-  // to the .hash method which will deliver a 
-  // hashed password once it completes
+  // 01 so here we can use our async callbacks
+  // 02 first we generate the salt
+  // 03 once we get back the salt, we can pass it
+  // 04 to the .hash method which will deliver a 
+  // 05 hashed password once it completes
   bcrypt.genSalt(10, (err, salt) => {
     bcrypt.hash(password, salt, (err, hash) => {
       // now we can actually store our hashed password

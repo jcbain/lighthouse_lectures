@@ -8,17 +8,18 @@
   <title>Document</title>
 </head>
 <body>
+  <header>
+    <p>welcome <span class="user-email"><%= user.email %></span></p>
+    <form method="POST" action="/logout">
+      <button class="logout" type="submit">Logout</button>
+    </form>
+  </header>
   
-  <h1>Protected Secrets!</h1>
-  <img src="https://cdn.dribbble.com/users/2190368/screenshots/4369474/gold-coins-treasure-chest-animated-icons.gif"/>
-
-  <h2>You are logged in as <%= user.email %></h2>
-  <h2>And your super secret that you don't want anyone else to know is: </h2>
-  <p><%= user.superSecret %></p>
-
-  <form method="POST" action="/logout">
-    <button type="submit">Logout</button>
-  </form>
+  <main>
+    <h1>Protected Secrets!</h1>
+    <h2>And your super secret that you don't want anyone else to know is: </h2>
+    <p><%= user.superSecret %></p>
+  </main>
 
 </body>
 </html>
