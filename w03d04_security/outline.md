@@ -15,6 +15,15 @@
   - sure, we aren't supposed to use the same password for multiple accounts, but we're human and we do
   - now someone from that company can try that password email combination elsewhere or sell it to some hacker
   - also, even if everyone is an angel at that company, that is putting a lot of faith in that their application won't get hacked
+- Sites that have stored plaintext passwords (plaintext offenders)
+  - ncaa
+  - myspace.com
+  - pizzahut
+  - whitehouse.gov
+  - ashleymadison
+  - mastercard
+  - lots of .gov
+
 
 - hashing 
   - the plain text is passed to the hashing algorithm and the hashing algorithm outputs a different string (this is know as a hash)
@@ -58,7 +67,7 @@
   - however `https` encrypts the communication between the sender and the reciever
     - so the person in the middle can still see the information coming over but it is all encrypted
     - we aren't going to do this for this app or in the curriculum, but you just purchase a certificate
-      - when a user connects to a webpage, the webpage will send over it TLS (transport layer security) certificate which contains a public key (used for authenticating the server)
+      - when a user connects to a webpage, the webpage will send over it TLS (transport layer security formerly Secure Socket Layers (SSL)) certificate which contains a public key (used for authenticating the server)
       - this certificate also suggests that the server is who they say they are
       - client uses public key to encrypt their data on the way back to the server then the server uses private key on their end to decrypt
 
