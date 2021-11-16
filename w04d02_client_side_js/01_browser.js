@@ -32,6 +32,7 @@ window.document
 // gets converted into the DOM, so we are not 
 // directly interacting with our html anymore
 // see outline
+// https://lucid.app/lucidchart/c2e551f9-4436-47f5-a02e-b9968d653db5/edit?beaconFlowId=287948C34F5AE235&invitationId=inv_48132f45-3735-47c6-a5ac-10bc6b0dd508&page=0_0#
 
 //
 console.dir(document)

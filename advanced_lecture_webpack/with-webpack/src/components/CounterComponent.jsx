@@ -16,7 +16,6 @@ import React, { useState } from "react";
 
 const CounterComponent = () => {
   const [counter, setCounter] = useState(0)
-
   return (
     <div className="counter">
       <p>The current value of the counter is {counter}</p>

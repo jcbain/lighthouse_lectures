@@ -125,8 +125,30 @@ yarn add --dev @babel/preset-env @babel/preset-react
 - we can actually write our `use` and pass it an object so that we can give it some options
 
 
+## Dev server
+- right now it is kind of annoying that we have to build and serve manually when we are developing. 
+- you know from working with CRA that we have a hot-reloading dev server always listening for file changes
+- well, webpack allows us to serve by adding on a command
 
+```sh
+yarn add --dev webpack-dev-server
+```
 
-
+```json
+"start": "webpack server --config webpack.config.js --open"
+```
 ## Different Modes
+
+- Now has come the time where we can actually start to think about partitioning our bundles.
+- perhaps we want a development bundle serving up a hot-reloading dev server while we are developing
+- and perhaps we want some file output that are compressed for a production build
+- well we can do that. We just need a couple of config files and one shared one that has all of the configuration that would be shared between the two. Let's start with creating a dev version
+
+```sh
+yarn add --dev webpack-merge
+```
+
+- now we can specify different options depending on the configuration.
+- for a production build, we just want the bundled assets
+- for a development build, the assets only need to be loaded into memory
 
