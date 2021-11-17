@@ -151,3 +151,32 @@ module.exports = {
 ```
 
 We can chain these loaders together to leverage their functionality for specific use-cases. Not, the array in the `use` attribute goes from last item to first. In the particular instance above, `css-loader` is responsible for convering all `css` files into valid string in our bundle. What `style-loader` does is take that string and inserts it into the DOM using a `<style>` element.
+
+## Babel
+What is Babel? Babel is a JavaScript transpiler. What is a transpiler? Well, a transpiler takes in one programming language and converts it to another. In our case, Babel converts our JavaScript to an earlier version of JavaScript that is more compatible across more browsers. 
+
+In the case of React, it also allows us to use more experimental features, such as JSX and traspile it to the equivalent ES5 syntax. 
+
+This could also be used in the case of JavaScript supersets, such as TypeScript where Babel can traspile it into JavaScript so that it can be run in the browser.
+
+Here's an example:
+
+ES2015 arrow functions
+```js
+[1, 2, 3].map((v) => console.log(v));
+```
+
+transpiled into ES5
+```js
+[1, 2, 3].map(function(v){
+  console.log(v);
+});
+```
+
+## Helpful Links
+- [Webpack docs](https://webpack.js.org/)
+- [Babel docs](https://babeljs.io/)
+- [Analyse your bundle](https://webpack.github.io/analyse/)
+
+## Other Bundlers
+- [Browserify](https://browserify.org/)

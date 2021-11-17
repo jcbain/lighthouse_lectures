@@ -10,6 +10,6 @@ module.exports = merge(common,{
     filename: '[contenthash].bundle.js' // bring back the contenthash
   },
   plugins: [
-    new CleanWebpackPlugin() // clean up stale or old builds
+    new CleanWebpackPlugin() // clean up stale or old builds 
   ],
 })

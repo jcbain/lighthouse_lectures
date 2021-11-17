@@ -7,11 +7,12 @@ const common = require('./09_webpack.config');
 module.exports = merge(common,{
   mode: "development",
   devtool: false,
-  output: {
-    path: path.resolve(__dirname, 'dist'), 
-    // filename: '[contenthash].bundle.js' 
-    filename: 'bundle.js'
-  },
+  // this can use the default
+  // output: {
+  //   path: path.resolve(__dirname, 'dist'), 
+  //   // filename: '[contenthash].bundle.js' 
+  //   filename: 'bundle.js'
+  // },
   devServer: {
     port: 3000
   }

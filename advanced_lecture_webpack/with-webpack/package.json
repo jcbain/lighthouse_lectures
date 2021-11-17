@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack --config 07_webpack.config.js",
     "dev": "webpack serve --config 08_dev.config.js --open",
-    "build": "webpack --config 10_prod.config.js"
+    "build": "webpack --config 10_prod.config.js",
+    "test" : "webpack --config prod.config.js --json > analysis.json"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
