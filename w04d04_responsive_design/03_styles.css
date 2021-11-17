@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 68px;
+}
+
+header {
+  height: 180px;
+  background-color: darkcyan;
+}
+
+section {
+  border: 4px solid chocolate;
+  width: 80%;
+  /* 02 lets give this a height */
+  /* 02 and you may have to change the line height in rule below */
+  height: 200px;
+}
+
+section p {
+
+  width: 25%;
+  /* 00 what about height */
+  /* 00 and you will notice that nothing happens */
+  /* 00 because by default a percentage for height */
+  /* 00 only works if the parent has a height set */
+  /* 00 otherwise the height will be exactly as much space */
+  /* 00 is needed for the content */
+  /* 00 also, line-height is keeping it at 200px */
+  /* height: 200px; */
+  height: 40%;
+  /* 01 lets try giving our parent a height section */
+  font-size: 100%; 
+  /* line-height: 200px; */
+  text-align: center;
+  margin: 10px;
+  background-color: tomato;
+  color: white;
+  display: inline-block;
+}
+
+footer {
+  height: 180px;
+  background-color: thistle;
+}

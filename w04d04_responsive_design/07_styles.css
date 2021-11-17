@@ -1,0 +1,60 @@
+/* 00 let's talk about em and rem */
+/* 00 these are both relative sizes as well */
+/* 00 but relative to font-sizes of our page */
+/* 00 wha wha wha whaaaat */
+/* 00 supposedly this has to do with print-media */
+/* 00 and things being layed out relative to the most */
+/* 00 important thing on the page, which is the word */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 68px;
+}
+
+header {
+  height: 180px;
+  background-color: darkcyan;
+}
+
+section {
+  border: 4px solid chocolate;
+  width: 80%;
+  /* height: 200px; */
+  font-size: 25px;
+}
+
+section p {
+  /* width: 25%; */
+  /* 01 let's play around with this */
+  /* 01 we will start with em */
+  /* 01 well em is a relative measure */
+  /* 01 to the font size of the parent */
+  /* width: 25vw; */
+  width: 10em;
+  /* 02 this can get a little dicey though */
+  /* 02 what if someone unknowingly changes  */
+  /* 02 the font-size of our parent? */
+  /* 02 well rem can be used which is relative to */
+  /* 02 the html element (if not specified is 16px) */
+  /* height: 40%; */
+  width: 20rem;
+  height: 25vh;
+  display: inline-block;
+  min-width: 100px;
+  /* max-width: 168px; */
+  /* font-size: 100%;  */
+  text-align: center;
+  /* line-height: 200px; */
+  margin: 10px;
+  background-color: tomato;
+  color: white;
+}
+
+footer {
+  height: 180px;
+  background-color: thistle;
+}

@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 68px;
+}
+
+header {
+  height: 180px;
+  background-color: darkcyan;
+}
+
+section {
+  border: 4px solid chocolate;
+  /* 02 let's modify this width*/
+  width: 80%;
+
+}
+
+/* 00 currently we are using absolute values here */
+/* 00 lets start by taking a look at percentages */
+section p {
+  /* width: 200px; */
+  /* 01 lets first change the width to 25% */
+  /* 01 and we can see that each p takes up  */
+  /* 01 25% of the viewport's width */
+  /* 01 however, this is because it's parent (section) */
+  /* 01 takes up 100% of the viewport's width */
+  /* 01 this value is relative to the parent */
+  /* 01 let's modify the parent */
+  width: 25%;
+  height: 200px;
+  /* 04 okay, well what about something like font-size */
+  /* 04 what if we give it a % */
+  /* 04 well if we click "computed" next to styles and search we */
+  /* 04 we can see what our pixel size is */
+  /* 04 6.8px which is 10% of our specified font-size on the body */
+  font-size: 10%; 
+  line-height: 200px;
+  text-align: center;
+  margin: 10px;
+  background-color: tomato;
+  color: white;
+  display: inline-block;
+}
+
+footer {
+  height: 180px;
+  background-color: thistle;
+}
