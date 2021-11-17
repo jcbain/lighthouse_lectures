@@ -1,10 +1,20 @@
-/* 00 let's talk about em and rem */
-/* 00 these are both relative sizes as well */
-/* 00 but relative to font-sizes of our page */
-/* 00 wha wha wha whaaaat */
-/* 00 supposedly this has to do with print-media */
-/* 00 and things being layed out relative to the most */
-/* 00 important thing on the page, which is the word */
+/* 00 MEDIA QUERIES */
+/* 00 media queries are going to be the primary */
+/* 00 way in which we make our websites responsive */
+/* 00 we can ask questions like if you screen is x-width */
+/* 00 apply these styles */
+
+/* 01 so what is a media query. Well is a query for the type*/
+/* 01 of media that the user is using. This can be */
+/* 01 print | screen | speech | all */
+/* 01 are you printing? okay let me adjust the layout */
+/* 01 are you using a screen reader, perhaps  */
+/* 01 today we are targeting the screen */
+
+/* 02 then we have to specify what feature we are targeting */
+/* 02 generally this will be max-width and min-width */
+/* 02 but it could also be the orientation */
+/* 02 or the light-level of the room wha wha wha whaatt */
 * {
   box-sizing: border-box;
 }
@@ -29,17 +39,8 @@ section {
 
 section p {
   /* width: 25%; */
-  /* 01 let's play around with this */
-  /* 01 we will start with em */
-  /* 01 well em is a relative measure */
-  /* 01 to the font size of the parent */
   /* width: 25vw; */
   width: 10em;
-  /* 02 this can get a little dicey though */
-  /* 02 what if someone unknowingly changes  */
-  /* 02 the font-size of our parent? */
-  /* 02 well rem can be used which is relative to */
-  /* 02 the html element (if not specified is 16px) */
   /* height: 40%; */
   width: 20rem;
   height: 25vh;
@@ -58,3 +59,29 @@ footer {
   height: 180px;
   background-color: thistle;
 }
+
+/* 03 so we are going to go down here and */
+/* 03 lets say we want to target our header */
+/* 03 and change the color */
+/* 03 well we are only targeting the screen */
+/* 03 so our media query looks like this */
+/* 03 so in this query we are asking, is  */
+/* 03 is the minimum width of the page bigger */
+/* 03 than 400px and if so, we are going to apply */
+/* 03 these styles */
+@media only screen and (min-width: 400px) {
+  header {
+    background-color: pink;
+  }
+}
+
+/* 04 so typically, we will build out multiple breakpoints */
+/* 04 breakpoints are litterally where our layout breaks */
+@media only screen and (min-width: 800px) {
+  header {
+    background-color: yellow;
+  }
+}
+
+/* 05 maybe for mobile we want a container flexed in a column */
+/* 05 but for bigger screens we want it flexed as a row */
