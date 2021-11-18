@@ -1,0 +1,35 @@
+// 00 how do we import
+@import "_12_variables";
+
+// $main-color: purple;
+// $border-width: 1em;
+// $border-style: dashed;
+// $border-color: green;
+// $border: $border-width $border-style $border-color;
+// $secondary-color: yellow;
+
+header {
+  background-color: $main-color;
+  border: $border;
+}
+
+footer {
+  background-color: $main-color;
+  color: $secondary-color;
+}
+
+section {
+  color: $main-color;
+  border: $border;
+  p {
+    background-color: $secondary-color;
+  }
+
+  &.alert {
+    color: red;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}

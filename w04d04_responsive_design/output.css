@@ -1,0 +1,9 @@
+header {
+  background-color: purple;
+  border: 1em dashed green;
+}
+
+footer {
+  background-color: purple;
+  color: yellow;
+}

@@ -1,0 +1,13 @@
+// 00 now we can also use partials
+// 00 so we don't to define resuable code
+// 00 in all of our scss files
+// 00 so we are going to put our variables here
+// 00 then we will go back to our scss file 
+// 00 and bring in our partial
+
+$main-color: purple;
+$border-width: 1em;
+$border-style: dashed;
+$border-color: green;
+$border: $border-width $border-style $border-color;
+$secondary-color: yellow;

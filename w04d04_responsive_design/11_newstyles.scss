@@ -1,0 +1,50 @@
+// 00 sass also has a handy feature 
+// 00 where we can nest our styles
+// 00 lets take a look at our original
+// 00 css file where we have a section p
+
+$main-color: purple;
+$border-width: 1em;
+$border-style: dashed;
+$border-color: green;
+$border: $border-width $border-style $border-color;
+$secondary-color: yellow;
+
+header {
+  background-color: $main-color;
+  border: $border;
+}
+
+footer {
+  background-color: $main-color;
+  color: $secondary-color;
+}
+
+// 01 so we have something like this in
+// 01 our original css file
+section {
+  color: $main-color;
+  border: $border;
+  // 02 and you can see that i can
+  // 02 just nest my styles
+  // 02 and says style my ps that
+  // 02 are children of section
+  p {
+    background-color: $secondary-color;
+  }
+
+  // 03 well what if what want to do soemthig like
+  // 03 section.alert // this section with this class
+  // 03 well the & is kinda like `this` in js
+  &.alert {
+    color: red;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// section p {
+
+// }

@@ -1,0 +1,20 @@
+// 00 so, since this is a super set
+// 00 all css is valid scss
+
+// 01 one of the cool things we can do is variables
+// 01 so how do we create variables in sass
+$main-color: purple;
+
+// 02 lets checkout what that sass library does
+// 02 we will run sass newstyles.scss 
+// 02 well if we specify a second argument
+// 02 sass newstyles.scss output.css
+// 02 then it will write to that file
+
+header {
+  background-color: $main-color;
+}
+
+footer {
+  background-color: $main-color;
+}

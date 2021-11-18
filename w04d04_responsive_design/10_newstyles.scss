@@ -1,0 +1,20 @@
+// 00 I can also specify that I want to watch for changes
+// 00 and output them if any  changes are made in my scss 
+// 00 file with this
+// 00 newstyles.scss output.css --no-source-map --watch
+$main-color: purple;
+$border-width: 1em;
+$border-style: dashed;
+$border-color: green;
+$border: $border-width $border-style $border-color;
+$secondary-color: yellow;
+
+header {
+  background-color: $main-color;
+  border: $border;
+}
+
+footer {
+  background-color: $main-color;
+  color: $secondary-color;
+}

@@ -1,0 +1,26 @@
+$main-color: purple;
+// 00 so imagine with have short hand variables 
+// 00 like border in which we specify three values at once
+$border-width: 1em;
+$border-style: dashed;
+$border-color: green;
+// 02 but we can also use variables inside variables
+$border: $border-width $border-style $border-color;
+
+// 03 in the outputted file, you will notice a source-mapping
+// 03 which allows us to take the css and convert back to scss
+// 03 but we can specify not to do that if we would like
+// 03 by running sass newstyles.scss output.css --no-source-map
+
+
+
+header {
+  background-color: $main-color;
+  // 01 and this wwill work
+  // border: $border-width $border-style $border-color;
+  border: $border;
+}
+
+footer {
+  background-color: $main-color;
+}

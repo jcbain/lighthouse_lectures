@@ -1,0 +1,44 @@
+@import "_12_variables";
+
+// 00 scss allows us to actually extend 
+// 00 one rule to another rule
+// 00 for example, imagine i had a rule for 
+// 00 a class called celebration
+.celebration {
+  color: $main-color;
+  background-color: $secondary-color;
+  border: $border;
+}
+
+div{
+  @extend .celebration;
+  font-size: 2em;
+}
+
+header {
+  background-color: $main-color;
+  border: $border;
+}
+
+footer {
+  background-color: $main-color;
+  color: $secondary-color;
+}
+
+
+section {
+  color: $main-color;
+  border: $border;
+  p {
+    background-color: $secondary-color;
+  }
+
+
+  &.alert {
+    color: red;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}

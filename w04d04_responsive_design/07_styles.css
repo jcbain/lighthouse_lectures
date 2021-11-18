@@ -85,3 +85,21 @@ footer {
 
 /* 05 maybe for mobile we want a container flexed in a column */
 /* 05 but for bigger screens we want it flexed as a row */
+
+/* 06 also, order matters */
+/* 06 in the scenario below, only the pink will */
+/* 06 be applied because it is just as specific */
+/* 06 as the rule above */
+/* @media only screen and (min-width: 800px) {
+  header {
+    background-color: yellow;
+  }
+}
+@media only screen and (min-width: 400px) {
+  header {
+    background-color: pink;
+  }
+} */
+
+/* 07 we can also search popular breakpoints */
+

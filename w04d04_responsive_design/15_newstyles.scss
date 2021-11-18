@@ -1,0 +1,74 @@
+@import "_12_variables";
+
+// 00 lets talk mixins
+// 00 our a style function
+@mixin cool-mixin {
+  color: mediumaquamarine;
+  background-color: mediumspringgreen;
+}
+
+h1 {
+  @include cool-mixin();
+}
+
+// 01 and we can pass parameters
+// 01 whoa whoa
+@mixin make-rectangular($n){
+  height: $n;
+  width: $n * 2;
+  @include cool-mixin();
+}
+
+.small {
+  @include make-rectangular(10px);
+}
+
+.medium {
+  @include make-rectangular(100px);
+}
+
+.big {
+  @include make-rectangular(500vh);
+}
+
+
+
+
+.celebration {
+  color: $main-color;
+  background-color: $secondary-color;
+  border: $border;
+}
+
+div{
+  @extend .celebration;
+  font-size: 2em;
+}
+
+header {
+  background-color: $main-color;
+  border: $border;
+}
+
+footer {
+  background-color: $main-color;
+  color: $secondary-color;
+}
+
+
+section {
+  color: $main-color;
+  border: $border;
+  p {
+    background-color: $secondary-color;
+  }
+
+
+  &.alert {
+    color: red;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
