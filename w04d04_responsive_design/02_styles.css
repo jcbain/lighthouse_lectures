@@ -1,3 +1,6 @@
+
+/* 00 currently we are using absolute values here */
+/* 00 lets start by taking a look at percentages */
 * {
   box-sizing: border-box;
 }
@@ -20,8 +23,7 @@ section {
 
 }
 
-/* 00 currently we are using absolute values here */
-/* 00 lets start by taking a look at percentages */
+
 section p {
   /* width: 200px; */
   /* 01 lets first change the width to 25% */

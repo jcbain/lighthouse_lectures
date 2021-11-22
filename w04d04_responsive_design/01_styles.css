@@ -15,7 +15,6 @@ header {
 
 section {
   border: 4px solid chocolate;
-  display: flex;
 }
 
 section p {
@@ -26,6 +25,7 @@ section p {
   margin: 10px;
   background-color: tomato;
   color: white;
+  display: inline-block;
 }
 
 footer {
