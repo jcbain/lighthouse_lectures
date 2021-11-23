@@ -10,7 +10,7 @@
 - [ ] Aggregation functions
 - [ ] `LIMIT` and `OFFSET`
 
-## SQL Challenges for lecture
+## SQL Challenges from lecture
 
 1. List the total number of songs
 ```sql

@@ -91,7 +91,7 @@ ORDER BY artist_name, release_date DESC;
 
 
 ```sql
-SELECT *, NOW() 
+SELECT *, NOW() -- Greenwich Mean Time
 FROM albums 
 WHERE release_date > NOW();
 
