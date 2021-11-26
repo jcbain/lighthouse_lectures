@@ -1,4 +1,12 @@
 // example object with an object literal
+
+// const bigfoot = {
+//   name: 'harry',
+//   location: 'U.S.',
+//   hasLargeFeet: true,
+//   relatives: ['yeti', 'gigantopithecus', 'chewbacca'],
+// };
+
 const obj = {
   name: 'etta', 
   age: 77, 
