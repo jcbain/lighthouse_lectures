@@ -20,7 +20,6 @@
 
 for more info go to: https://www.cloudflare.com/en-ca/learning/ddos/glossary/open-systems-interconnection-model-osi/
 
-## TCP vs UDP
 
 ### Intro
 
