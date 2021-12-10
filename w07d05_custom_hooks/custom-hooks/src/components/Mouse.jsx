@@ -30,12 +30,12 @@ const Mouse = () => {
     width: '50px',
     backgroundColor: 'purple',
     left: position.x -25,
-    top: position.y - 50,
+    top: position.y - 25,
     borderRadius: '50%'
   }
 
   return (
-    <div style={{position: 'relative'}}>
+    <div>
       <h1>Mouse Position Component</h1>
       <div style={pointerStyle}></div>
       <p>x position: {position.x}</p>

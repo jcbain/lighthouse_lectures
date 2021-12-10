@@ -1,0 +1,10 @@
+{
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": null,
+  "workbench.colorTheme": "Gruvbox Light Soft",
+  "diffEditor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "workbench.editor.highlightModifiedTabs": true,
+  "window.zoomLevel": 1,
+  "workbench.iconTheme": "material-icon-theme"
+}

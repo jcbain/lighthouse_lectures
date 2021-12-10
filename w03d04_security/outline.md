@@ -5,7 +5,7 @@
 
 - Today we will be discussing security, issues that still exist in our tiny app currently
 - so the imporant things that we are going to go over today are hashing our passwords and cookie encryption
-- we will finish up with REST architecture and how we can create our own middleware
+- we will finish up with REST architecture and/or how we can create our own middleware
 
 ## Hashing passwords
 
