@@ -4,6 +4,7 @@
 - going to be dipping our feet in to jquery but first, let's play around with JavaScript in the browser
 
 ## play around with js in the browser
+- start with 00_index.html but only to practice styling then go to 01_brower.js
 
 ## The DOM
 - Document Object Model
