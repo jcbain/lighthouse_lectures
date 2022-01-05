@@ -7,10 +7,10 @@ const pg = require('pg');
 const Client = pg.Client;
 
 const config = {
-  user: 'sfljbfvz',
+  user: 'usernameString',
   host: 'kashin.db.elephantsql.com',
-  database: 'sfljbfvz',
-  password: 'z8_NANXGDQ1D6pLTRwKY85GVSE235Xtf',
+  database: 'db_name',
+  password: 'some_PasswordSt$ing',
   port: 5432,
 };
 

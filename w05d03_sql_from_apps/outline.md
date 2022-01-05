@@ -9,7 +9,7 @@
 - only single table queries today
 - we'll be using Elephant SQL (https://customer.elephantsql.com/instance)
 - create a new instance and name the database `primates`
-- then copy and past table creation and insert queries to create table
+- then copy and paste table creation and insert queries to create table
 
 ## Connecting to the database
 

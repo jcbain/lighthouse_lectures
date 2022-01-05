@@ -16,20 +16,20 @@ const Client = pg.Client;
 // 02 aka a URL (go to details in elephantSQL and copy URL )
 
 // 03 this is our connection string
-// 03 postgres://sfljbfvz:z8_NANXGDQ1D6pLTRwKY85GVSE235Xtf@kashin.db.elephantsql.com/sfljbfvz
+// 03 postgres://usernameString:some_PasswordSt$ing@kashin.db.elephantsql.com/db_name
 
 // 03 the first part `postgres://` is the protocol
-// 03 sfljbfvz is the username (anything after / up to the :)
-// 03 z8_NANXGDQ1D6pLTRwKY85GVSE235Xtf is the password (from : to @)
+// 03 usernameString is the username (anything after / up to the :)
+// 03 some_PasswordSt$ing is the password (from : to @)
 // 03 kashin.db.elephantsql.com is the host (after the @)
-// 03 sfljbfvz is the database name (everything after the final / same as user for elephantSQL)
+// 03 db_name is the database name (everything after the final / same as user for elephantSQL)
 // 03 and we will be connecting on the default postgres port of 5432
 
 const config = {
-  user: 'sfljbfvz',
+  user: 'usernameString',
   host: 'kashin.db.elephantsql.com',
-  database: 'sfljbfvz',
-  password: 'z8_NANXGDQ1D6pLTRwKY85GVSE235Xtf',
+  database: 'db_name',
+  password: 'some_PasswordSt$ing',
   port: 5432,
 };
 
