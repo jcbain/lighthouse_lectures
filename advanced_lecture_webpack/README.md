@@ -30,7 +30,7 @@ In other words, it take all of our JavaScript modules and converts them down int
 
 ## Default Behavior
 
-As of version 4 of Webpack, a configuration file is **not** need in order to bundle our modules. In our project, as long as we have a `src/index.js` we can simply run `webpack` in our command line which will output a bundled file called `main.js` in a directory called `dist/`.
+As of version 4 of Webpack, a configuration file is **not** needed in order to bundle our modules. In our project, as long as we have a `src/index.js` we can simply run `webpack` in our command line which will output a bundled file called `main.js` in a directory called `dist/`.
 
 ## Entrypoint
 
@@ -176,6 +176,7 @@ transpiled into ES5
 ## Helpful Links
 - [Webpack docs](https://webpack.js.org/)
 - [Babel docs](https://babeljs.io/)
+- [What is @babel/preset-env and why do I need it?](https://blog.jakoblind.no/babel-preset-env/) by Jakob Lind
 - [Analyse your bundle](https://webpack.github.io/analyse/)
 
 ## Other Bundlers

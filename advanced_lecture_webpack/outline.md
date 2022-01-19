@@ -73,7 +73,7 @@ If we can modify the entrypoint, surely we can modify the output. Let's take a l
 - so, there are a couple things that are pretty annoying right now: 
   1. everytime a new bundle is generated I have to change the `src` attribute in my `index.html`
   2. there is no clean up from previously build bundles
-- Plugins are here to help us out with our management of assets (amont other things)
+- Plugins are here to help us out with our management of assets (among other things)
 - first let's install a couple of these plugins before we start to use them to help us out.
 
 ```sh

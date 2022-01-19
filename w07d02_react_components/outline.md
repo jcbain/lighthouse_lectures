@@ -26,7 +26,7 @@
 - public/
   - favicon.ico 
   - index.html
-  - manifest.json (just gives instructions on what icon to use given a certain screen size)
+  - manifest.json (just gives instructions on what icon to use given a certain screen size if we download the app like a native app)
   - robots.txt (a set of instructions for robots (search engines like google) on what url strings can be crawled from what user-agents)
   - index.html
     - <div id="root"></div>
