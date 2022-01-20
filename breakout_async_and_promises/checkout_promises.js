@@ -42,3 +42,5 @@ askCustomerService('🍕')
     console.log(err);
     checkoutAllItems(1, groceryCart)
   })
+
+  console.log(groceryCart)

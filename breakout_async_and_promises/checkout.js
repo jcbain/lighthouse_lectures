@@ -30,13 +30,37 @@ const askCustomerService = (item, callback) => {
 
 
 
-checkout(1, grabItem(store))
+
+// checkout(1, grabItem(store))
+// askCustomerService(grabItem(store), (err, data) => {
+//   if(err) {
+//     return console.log(err);
+//   }
+//   checkout(2, data);
+// })
+// checkout(3, grabItem(store))
+// checkout(4, grabItem(store))
+// checkout(5, grabItem(store))
+
+
+const checkoutAllItems = (customerNum, cart) => {
+  for(const item of cart) {
+    checkout(customerNum, item)
+  }
+}
+const groceryCart = [];
 askCustomerService(grabItem(store), (err, data) => {
   if(err) {
     return console.log(err);
   }
-  checkout(2, data);
+  groceryCart.push(data);
+  askCustomerService(grabItem(store), (err, data) => {
+    if(err) {
+      console.log(err);
+      return checkoutAllItems(1, groceryCart);
+    }
+
+    groceryCart.push(data);
+    checkoutAllItems(1, groceryCart);
+  })
 })
-checkout(3, grabItem(store))
-checkout(4, grabItem(store))
-checkout(5, grabItem(store))
