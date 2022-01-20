@@ -1,4 +1,4 @@
-const store = ['🌮', '🍕', '🥑', '🥖', '🧄', '🧇', '🫐', '🥦', '🥟', '🍙', '🌯'];
+const store = ['🌮', '🍕', '🥑', '🥖', '🧄', '🧇', '🫐', '🥦', '🥟', '🍙', '🌯', '🥗', '🍣', '🍩', '🥮', '🍦'];
 
 const grabItem = (store) => {
   const numOptions = store.length;
@@ -10,7 +10,7 @@ const grabItem = (store) => {
 
 const checkout = (customerNum, item) => {
   console.log(`(${customerNum}) 🛒 Thank you for buying ${item}. Have a nice day!`);
-} 
+}; 
 
 const askCustomerService = (item, callback) => {
   console.log(`\t🤷 Hello, customer service, where can I find ${item}`);
