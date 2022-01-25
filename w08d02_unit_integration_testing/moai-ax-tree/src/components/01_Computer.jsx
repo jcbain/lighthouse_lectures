@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Computer = (props) => {
   //  03 section with add ability to add state
   //  03 Game component needs to pass down the setter
@@ -28,6 +27,7 @@ const Computer = (props) => {
         // 04 and we can run our tests and check the browser
         onClick={() => setState({...state, cheating: !state.cheating})}
         // 05 and now we just have one more test to tackle
+        // 05 mocking axios
       >
         🤖
       </span>

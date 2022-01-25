@@ -5,7 +5,7 @@
 - [] Planning your app (todo list)
 - [] Building a component
 - [] Passing props
-- [] Handling state
+- [] HandlingRea state
 - [] Side effects and ajax
 - [] Custom hooks
 

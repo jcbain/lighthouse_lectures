@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Computer from './Computer'
 import Player from './Player'
 import Result from './Result'
@@ -14,8 +14,7 @@ const Game = () => {
   return (
     <div>
       <main className="game">
-        {/* 00 setter setState added  */}
-        <Computer state={state} setState={setState} />
+        <Computer state={state} />
         <Player state={state} setState={setState} />
       </main>
       <Result status={state.status} />

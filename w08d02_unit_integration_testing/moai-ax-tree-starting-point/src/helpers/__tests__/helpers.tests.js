@@ -1,6 +1,5 @@
 import { announceResult } from '../helpers'
 
-
 describe('announceResult function', () => {
   let fakeState;
 
