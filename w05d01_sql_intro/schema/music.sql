@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS albums;
 
 CREATE TABLE albums (
   id SERIAL PRIMARY KEY,
-  album_name VARCHAR(50),
+  album_name VARCHAR(70),
   artist_name VARCHAR(50),
   release_date DATE, 
   genre VARCHAR(50)
@@ -33,7 +33,8 @@ VALUES  ('Valentine', 'Snail Mail', 'November 5, 2021', 'indie rock'),
         ('at last!', 'Etta James', 'November 15, 1960', 'R&B'),
         ('I''m Wide Awake, It''s Morning', 'Bright Eyes', 'January 25, 2005', 'folk'),
         ('Laurel Hell', 'Mitski', 'February 5, 2022', 'indie rock'),
-        ('Fleet Foxes', 'Fleet Foxes', 'June 3, 2008', 'folk');
+        ('Fleet Foxes', 'Fleet Foxes', 'June 3, 2008', 'folk'),
+        ('Village Full of Medical Professionals and a Werewolf', 'James Bain', 'October 11, 2025', 'indie rock');
         
 
 
@@ -203,6 +204,17 @@ VALUES  (1, 1, 'Valentine', 8, '00:03:16'),
         (13, 8, 'Land Locked Blues', 8, '00:05:46'),
         (13, 9, 'Poison Oak', 8.5, '00:04:50'),
         (13, 10, 'Road to Joy', 8, '00:03:54'),
+        (14, 1, 'Valentine, Texas', 8.5, '00:02:35'),
+        (14, 2, 'Working for the Knife', 8.5, '00:02:38'),
+        (14, 3, 'Stay Soft', 9, '00:03:16'),
+        (14, 4, 'Everyone', 8.0, '00:03:47'),
+        (14, 5, 'Heat Lightning', 9.5, '00:02:51'),
+        (14, 6, 'The Only Heartbreaker', 9.5, '00:03:04'),
+        (14, 7, 'Love Me More', 7.5, '00:03:32'),
+        (14, 8, 'There''s Nothing Left Here for You', 8.0, '00:02:52'),
+        (14, 9, 'Should''ve Been Me', 7.5, '00:02:24'),
+        (14, 10, 'I Guess', 8.0, '00:02:15'),
+        (14, 12, 'That''s Our Lamp', 8.5, '00:02:35'),
         (15, 1, 'Sun It Rises', 8, '00:03:14'),
         (15, 2, 'White Winter Hymnal', 9, '00:02:27'),
         (15, 3, 'Ragged Wood', 8, '00:05:07'),
@@ -214,3 +226,6 @@ VALUES  (1, 1, 'Valentine', 8, '00:03:16'),
         (15, 9, 'Meadowlarks', 8.5, '00:03:11'),
         (15, 10, 'Blue Ridge Mountains', 9.5, '00:04:25'),
         (15, 11, 'Oliver James', 7.5, '00:03:23');
+
+
+

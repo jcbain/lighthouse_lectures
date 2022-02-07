@@ -3,7 +3,9 @@ import ClassComponent from './components/05_ClassComponent';
 import LifecycleComponent from './components/09_LifecycleComponent';
 
 // 5 we need to bring in all of the great react-router-dom stuff
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+// import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+
 
 // 1 before hooks were introduced in 16.8
 // 1 the only way to handle state in components
@@ -30,15 +32,11 @@ function App() {
         </nav>
 
         {/* 8 swith just ensure only one of our components renders at once */}
-        <Switch>
+        <Routes>
           {/* 8 the path says, if the path is lifecycle render this component */}
-          <Route path="/lifecycle">
-            <LifecycleComponent someProp={'boogaloo'}/>
-          </Route>
-          <Route path="/class">
-            <ClassComponent someProp="I'm a prop" />
-          </Route>
-        </Switch>
+          <Route path="/lifecycle" element={<LifecycleComponent />}/>
+          <Route path="/class" element={<ClassComponent someProp="I'm a prop" />} />
+        </Routes>
         {/* 9 now we have the ability to unmount */}
         {/* 9 so lets demonstrate some cleanup 09_Lifecycle */}
 

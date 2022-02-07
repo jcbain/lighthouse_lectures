@@ -179,3 +179,4 @@ Front-end development is a chance for us to express our creativity. Creativity l
 * [HTML5 Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 * [MDN - Box Sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
 * [CSS Specificity](https://dev.to/emmawedekind/css-specificity-1kca)
+* [Box model tweet by @anniebombanie_](https://twitter.com/anniebombanie_/status/1485600904720101380/photo/1)

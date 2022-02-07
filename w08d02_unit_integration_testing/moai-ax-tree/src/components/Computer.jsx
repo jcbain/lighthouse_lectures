@@ -1,8 +1,7 @@
 import React from 'react';
 
 const Computer = (props) => {
-  //  03 section with add ability to add state
-  //  03 Game component needs to pass down the setter
+ 
   const {state, setState} = props;
 
   
@@ -21,13 +20,8 @@ const Computer = (props) => {
         // 01 if we do data-* it will allow us to attach
         // 01 key value pairs and only javascript will use it
         data-testid="robot"
-        // 02 at step of adding class now
-        // 02 if cheating is true then add the class
-        className={state.cheating ? 'cheating' : null}
-        // 04 now we just need a click handler 
-        // 04 and we can run our tests and check the browser
-        onClick={() => setState({...state, cheating: !state.cheating})}
-        // 05 and now we just have one more test to tackle
+        // className={state.cheating ? 'cheating' : null}
+        // onClick={() => setState({...state, cheating: !state.cheating})}
       >
         🤖
       </span>
