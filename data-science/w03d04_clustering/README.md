@@ -18,3 +18,6 @@ docker build -t <imagename> .
 ```sh
  docker run --rm -it -v ${PWD}/src:/src -p 8888:8888 <imagename>
 ```
+
+## Helpful Resources
+- [Python Data Science Handbook (Kmeans)](https://jakevdp.github.io/PythonDataScienceHandbook/05.11-k-means.html) with today's examples discussed in detail
