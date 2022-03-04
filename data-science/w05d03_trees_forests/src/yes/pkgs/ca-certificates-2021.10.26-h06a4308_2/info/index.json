@@ -1,0 +1,12 @@
+{
+  "arch": "x86_64",
+  "build": "h06a4308_2",
+  "build_number": 2,
+  "depends": [],
+  "license": "MPL 2.0",
+  "name": "ca-certificates",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1635220140842,
+  "version": "2021.10.26"
+}
