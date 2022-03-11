@@ -15,3 +15,4 @@
 - [Another Ranking of DBMSs](https://db-engines.com/en/ranking)
 - [SELECT Queries Order of Execution](https://sqlbolt.com/lesson/select_queries_order_of_execution)
 - [SQL Joins Visualizer](https://sql-joins.leopard.in.ua/)
+- [Today's Slides](https://docs.google.com/presentation/d/1gI3a8iGPvW-1wxPIPYUldkGNB47mrnrQIWeHHZt8DfE/edit?usp=sharing)
