@@ -9,10 +9,19 @@
 - [ ] Aggregation functions
 
 
-
 ### Useful Links
 - [Top 10 Most Popular RDBMSs](https://www.c-sharpcorner.com/article/what-are-the-most-popular-relational-databases/)
 - [Another Ranking of DBMSs](https://db-engines.com/en/ranking)
 - [SELECT Queries Order of Execution](https://sqlbolt.com/lesson/select_queries_order_of_execution)
 - [SQL Joins Visualizer](https://sql-joins.leopard.in.ua/)
 - [Today's Slides](https://docs.google.com/presentation/d/1gI3a8iGPvW-1wxPIPYUldkGNB47mrnrQIWeHHZt8DfE/edit?usp=sharing)
+
+## Installing and Running container
+
+```sh
+docker build -t jcbain/ds-sql
+```
+
+```sh
+docker run -it --rm -v ${PWD}/:/src -p 8888:8888 --env-file .env jcbain/ds-sql
+```
